@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airlines</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg custom-navbar"> <!--Boostrap / navbar:responsive / navbar-expand-md:indica cuando expandir para pantallas grandes / custom-navbar: clase creda por mi para colores--> 
+            <div class="container-fluid"> <!--container-fluid:nav ocupa todo el 100%width-->
+                
+                <a class="navbar-brand ms-5" href="./index.html"> <img src="../img/logos/logo.png" alt="Airlines"></a>
+                <a class="navbar-brand logo2" href="./index.html"> <img src="../img/logos/logo2.png" alt="Airlines"></a>
+                
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu"><spam class="navbar-toggler-icon"></spam></button>
+
+                <div class="collapse navbar-collapse" id="menu"> 
+                    <ul class="navbar-nav mx-auto gap-4"> <!--mejorar, cuando colapse a md el gap desaparezca / mx-auto permite centrar los items en la barra recordar-->
+                        <li class="nav-item"> <a class="nav-link" href="../../index.html">Inicio</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="../pages/airbus.html">Airbus</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="../pages/boeing.html">Boeing</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="../pages/sobrenosotros.html">Sobre nosotros</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="../pages/contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="airbus_titulo">Airbus</h2>
+        <section> <!--Sección de tarjetas que contendran modelos de aviones linkeados a sus respectivos html-->
+            <div class="grid-container">
+                <div class="card">
+                    <img src="../img/airbus/a220.jpg" alt="Avion Airbus A220">
+                    <div class="card-description">
+                        <h3><a href="#a220">Airbus A220</a></h3>
+                        <p>Modernidad en la aviación Regional.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="../img/airbus/a320neo.jpg" alt="Avión Airbus A320 NEO">
+                    <div class="card-description">
+                        <h3><a href="#a320neo">Airbus A320 NEO</a></h3>
+                        <p>Sostenibilidad en la aviación comercial.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="../img/airbus/a380.jpg" alt="Avión Airbus A380">
+                    <div class="card-description">
+                        <h3><a href="#a380">Airbus A380</a></h3>
+                        <p>El avión de pasajeros más grande del mundo.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="../img/airbus/belugaxl.jpg" alt="Avión Airbus BelugaXL">
+                    <div class="card-description">
+                        <h3><a href="#belugaxl"> Airbus Beluga XL</a></h3>
+                        <p>El avión de carga más simpatico.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="article-container"> <!--Se crea la clase para ubicar todos los articulos en un mismo contenedor y poder ubicarlos con flexbox-->
+            <article class="article"> <!--Se crea la clase para detallar en cada articulo en css y con flexbox -->
+                <div>
+                    <h3 class="article_plane" id="a220">Airbus A220: Modernidad en la aviación Regional</h3>
+                    <h4>Introducción</h4>
+                    <p>El Airbus A220 es un avión de última generación diseñado para ofrecer eficiencia, confort y flexibilidad en rutas regionales y de corto alcance. Su tecnología avanzada y su bajo consumo de combustible lo convierten en una opción atractiva para aerolíneas que buscan reducir costos operativos sin sacrificar el rendimiento.</p>
+
+                    <h4>Historia y desarrollo</h4>
+                    <p>El Airbus A220 tuvo su origen en el programa CSeries de Bombardier, desarrollado para competir en el segmento de aviones de 100 a 150 pasajeros. En 2018, Airbus adquirió la participación mayoritaria en el programa y lo renombró como A220, integrándolo a su catálogo de aviones comerciales.</p>
+
+                    <h4>Diseño e innovaciones</h4>
+                    <p>El Airbus A220 incorpora numerosas innovaciones tecnológicas:</p>
+                    <ul>
+                        <li>Estructura de materiales compuestos: Reduce el peso y mejora la eficiencia en el consumo de combustible.</li>
+                        <li>Motores Pratt & Whitney PW1500G: Ofrecen menor consumo de combustible y reducen significativamente el ruido.</li>
+                        <li>Cabina espaciosa y moderna: Con asientos más anchos y mayor comodidad para los pasajeros.</li>
+                        <li>Mayor eficiencia operativa: Permite a las aerolíneas operar rutas de menor demanda con costos reducidos.</li>
+                    </ul>
+
+                    <h4>Variantes del Airbus A220</h4>
+                    <p>El Airbus A220 está disponible en dos versiones principales:</p>
+                    <ul>
+                        <li>A220-100: Capacidad para aproximadamente 120 pasajeros y un alcance de hasta 6,390 km.</li>
+                        <li>A220-300: Modelo más grande, con capacidad para 150 pasajeros y un alcance de hasta 6,297 km.</li>
+                    </ul>
+                    
+                    <h4>Conclusión</h4>
+                    <p>El Airbus A220 ha revolucionado el mercado de la aviación regional con su eficiencia, tecnología avanzada y confort para los pasajeros. Su popularidad sigue en aumento, y su impacto en la industria aérea lo posiciona como uno de los aviones más innovadores de su categoría.</p>
+                </div>
+            </article>
+
+            <article class="article">
+                <div>
+                    <h3 id="a320neo">Airbus A320neo: Sostenibilidad en la aviación comercial</h3>
+                    <h4>Introducción</h4>
+                    <p>El Airbus A320neo es una versión modernizada y mejorada de la exitosa familia A320, diseñada para ofrecer mayor eficiencia en el consumo de combustible, menores emisiones y una experiencia de vuelo más cómoda. Gracias a sus innovaciones tecnológicas, se ha convertido en uno de los aviones más populares entre las aerolíneas de todo el mundo.</p>
+
+                    <h4>Historia y desarrollo</h4>
+                    <p>El programa A320neo (New Engine Option) fue lanzado en 2010 por Airbus con el objetivo de mejorar el rendimiento de la familia A320. Su primer vuelo se realizó el 25 de septiembre de 2014 y entró en servicio comercial en 2016 con Lufthansa como cliente de lanzamiento.</p>
+
+                    <h4>Diseño e innovaciones</h4>
+                    <p>El Airbus A320neo incorpora diversas mejoras en comparación con la versión anterior:</p>
+                    <ul>
+                        <li>Motores más eficientes: Disponible con motores Pratt & Whitney PW1100G-JM o CFM International LEAP-1A, que reducen el consumo de combustible hasta en un 20%.</li>
+                        <li>Sharklets en las alas: Mejoran la aerodinámica y reducen la resistencia, aumentando la eficiencia del avión.</li>
+                        <li>Mayor autonomía: Puede operar rutas más largas con mayor eficiencia, permitiendo nuevas oportunidades para las aerolíneas.</li>
+                        <li>Reducción de emisiones y ruido: Su tecnología avanzada permite una disminución significativa de CO₂ y una operación más silenciosa.</li>
+                    </ul>
+
+                    <h4>Variantes del Airbus A320</h4>
+                    <p>El Airbus A320neo forma parte de una familia de aeronaves con diferentes capacidades y alcances:</p>
+                    <ul>
+                        <li>A319neo: Modelo más pequeño con capacidad para 140 pasajeros y un alcance de hasta 7,400 km.</li>
+                        <li>A320neo: Versión estándar con capacidad para 180 pasajeros y un alcance de 6,300 km.</li>
+                        <li>A321neo: Variante más grande con capacidad para 244 pasajeros y un alcance de hasta 7,400 km.</li>
+                    </ul>
+                    
+                    <h4>Conclusión</h4>
+                    <p>El Airbus A320neo es un avión clave en la aviación moderna, combinando eficiencia, innovación y sostenibilidad. Su popularidad y éxito comercial reflejan su impacto positivo en la industria aérea, estableciendo un nuevo estándar para la aviación de pasillo único.</p>
+                </div>
+            </article>
+
+            <article class="article">
+                <div>
+                    <h3 id="a380">Airbus A380: El Gigante de los Cielos</h3>
+                    <h4>Introducción</h4>
+                    <p>El Airbus A380 es el avión de pasajeros más grande del mundo, diseñado para ofrecer máxima capacidad y confort en vuelos de larga distancia. Con su icónica doble cubierta y tecnología avanzada, se ha convertido en una de las aeronaves más emblemáticas de la aviación comercial.</p>
+
+                    <h4>Historia y desarrollo</h4>
+                    <p>El desarrollo del A380 comenzó en la década de 1990 con el objetivo de competir con el Boeing 747 y satisfacer la creciente demanda de transporte aéreo. Su primer vuelo tuvo lugar el 27 de abril de 2005 y entró en servicio comercial en 2007 con Singapore Airlines.</p>
+
+                    <h4>Diseño e innovaciones</h4>
+                    <p>El Airbus A380 introdujo múltiples avances tecnológicos en la aviación:</p>
+                    <ul>
+                        <li>Doble cubierta completa: Es el único avión comercial con dos cubiertas a lo largo de toda su longitud, maximizando el espacio para pasajeros.</li>
+                        <li>Motores eficientes: Equipado con motores Rolls-Royce Trent 900 o Engine Alliance GP7200, diseñados para reducir el consumo de combustible.</li>
+                        <li>Aerodinámica avanzada: Incorporación de materiales compuestos y diseño optimizado para mejorar la eficiencia.</li>
+                        <li>Experiencia de lujo: Muchas aerolíneas incluyeron suites privadas, bares y áreas de descanso en sus configuraciones.</li>
+                    </ul>
+
+                    <h4>Capacidad y operación</h4>
+                    <p>El A380 puede transportar entre 555 y 850 pasajeros, dependiendo de la configuración de la aerolínea. Su alcance máximo es de 15,200 km, lo que le permite realizar vuelos intercontinentales sin escalas.</p>
+                    
+                    <h4>Conclusión</h4>
+                    <p>El Airbus A380 representó un hito en la aviación comercial, combinando lujo, capacidad y tecnología avanzada. Aunque su producción ha finalizado, su legado perdura como una de las aeronaves más impresionantes y reconocibles de la historia.</p>
+                </div>
+            </article>
+
+            <article class="article">
+                <div>
+                    <h3 id="belugaxl">Airbus BelugaXL: El Gigante del Transporte Aéreo</h3>
+                    <h4>Introducción</h4>
+                    <p>El Airbus BelugaXL es un avión de carga especializado diseñado para transportar componentes de aeronaves y otras cargas voluminosas. Su inconfundible diseño inspirado en la ballena beluga lo hace único en la aviación y le permite desempeñar un papel clave en la cadena logística de Airbus.</p>
+
+                    <h4>Historia y desarrollo</h4>
+                    <p>El BelugaXL fue desarrollado como sucesor del Airbus A300-600ST Beluga, con el objetivo de aumentar la capacidad de transporte de grandes piezas para la producción de aeronaves. Su diseño se basa en el Airbus A330-200, pero con una estructura modificada para ampliar la bodega de carga.</p>
+
+                    <h4>Diseño e innovaciones</h4>
+                    <p>El BelugaXL incorpora múltiples mejoras con respecto a su predecesor:</p>
+                    <ul>
+                        <li>Mayor capacidad de carga: Puede transportar hasta 51 toneladas y tiene una bodega un 30% más grande que el Beluga original.</li>
+                        <li>Dimensiones ampliadas: Con 63,1 metros de largo y 8,8 metros de ancho, puede albergar alas completas del Airbus A350.</li>
+                        <li>Eficiencia optimizada: Basado en el A330, cuenta con motores Rolls-Royce Trent 700 y mejoras aerodinámicas para reducir el consumo de combustible.</li>
+                        <li>Diseño distintivo: Su morro elevado y la pintura con una “sonrisa de beluga” le otorgan una imagen icónica.</li>
+                    </ul>
+
+                    <h4>Operación y uso</h4>
+                    <p>El Airbus BelugaXL es operado exclusivamente por Airbus Transport International y se encarga de trasladar secciones de aviones entre las plantas de producción de Airbus en Europa. Su alcance máximo es de 4,000 km con carga completa.</p>
+                    
+                    <h4>Conclusión</h4>
+                    <p>El Airbus BelugaXL es un avión esencial en la industria aeronáutica, combinando un diseño innovador con una capacidad de carga sin precedentes. Su papel en la logística de Airbus asegura que la fabricación de aeronaves se mantenga eficiente y competitiva en el mercado global.</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div>
+            <p>Todos los derechos reservados @2025</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

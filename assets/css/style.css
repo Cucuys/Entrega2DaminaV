@@ -1,0 +1,322 @@
+/*Configuraciones generales para BODY MAIN y H1..*/
+
+body {
+    background-color: rgb(18, 18, 18);
+}
+
+main {
+    background-color: rgb(18, 18, 18);
+    color: white;
+}
+
+h1 {
+    color: rgba(189, 144, 68, 1);
+}
+
+h2 {
+    color: rgba(189, 144, 68, 1);
+}
+
+h4 {
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+
+.welcome { /*Se centran todos los items y texto,se genera un background con un gradiente para no editar la imagen original así se puede ver con contraste el texto*/
+    position: relative;
+    width: 100vw;
+    height: 70vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), 
+                url("../img/genericas/welcomeL.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+
+.welcome_description {
+    margin-top: 32vh;
+}
+
+.welcome img { /*se configura la imagen para que quede al fondo y encaje sin deformarse en vista movile o desktop*/
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.custom-navbar {
+    background-color: black;
+}
+
+.logo2 img {
+    width: 200px;
+    height: auto;
+}
+
+.navbar-brand img {
+    height: 70px; /*tamaño del logo*/
+}
+
+.custom-navbar .nav-link{
+    color: rgba(189, 144, 68, 1);
+}
+
+.custom-navbar .navbar-toggler {
+    border: none; /*quitar el borde del menú hamburguesa dejar 3 lineas */
+}
+
+.custom-navbar .navbar-toggler-icon { 
+    background-color: black;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28189, 144, 68, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+} /* consultar por background image como se cambia sin url el color*/
+
+
+/*TERMINAR AGREGAR DEGRADADO EN LATERALES Y OSCURECER LA IMAGEN DE FONDO, AGREGAR LAS FOTOS Y ENLACES VER MAS*/
+
+#carouselExampleIndicators { /* se da estilo al id para no crear mas clases ya que las noticias se veran en carusel sólo en el inciio */
+    max-width: 100vw;  
+    margin: 40px auto; 
+    
+} 
+
+#carouselExampleIndicators .carousel-inner {
+    overflow: hidden; /* Para evitar que se salga la imagen */
+}
+
+#carouselExampleIndicators .carousel-item img { /* se especifica la clase luego del id para que la imagen tenga un alto y cubra todo el contenedor*/
+    height: 300px; 
+    object-fit: cover; 
+}
+
+
+
+/*TARJETAS CON GRID, SE GENERA CON GRID PARA LA CONSIGNA*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.card { /* Se le da estilo a la tarjeta */
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background: black; 
+}
+
+/* Se editó la imagen para que aparezca con difuminada hasta que que interactue con el mouse */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(5px); 
+    transition: filter 0.5s ease;
+}
+
+/* Descripció con el texto centrado y fondo opaco*/
+.card-description {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+}
+
+.card-description h3 { /* Título centrado con animacion*/
+    font-size: 26px;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.card-description h3 a { /* Se le quita la decoración y se le da color al titulo */
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.card:hover img { /* Al pasar el ratón por encima se pierde el blur de la img */
+    filter: blur(0px); 
+}
+
+.card:hover h3 { /*Para centrar el titulo una vez aparezca pasando el ratón*/
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+/* Se cambia el estilo para celular, una tarjeta por fila y se oculta la descripción para ahorrar espacio */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; 
+    }
+
+    .card {
+        height: 150px;
+    }
+
+    .card-description p {
+        display: none; 
+    }
+}
+
+
+
+/*SECCION DE PILOTOS HEROICOS*/
+
+/* CONTENEDOR DEL RESUMEN DE LAS HISTORIAS */
+.history {
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    margin: auto;
+    padding: 40px 20px;
+    position: relative;
+}
+
+/* Titulo principal */
+.history h2 {
+    font-size: 35px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* ESTILO DE LOS ARTÍCULOS */
+.history article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(189, 144, 68, 1); 
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    color: white;
+    position: relative;
+}
+
+/* ESTILO DEL TÍTULO DEL ARTÍCULO */
+.history article h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* BOTÓN DE "VER MÁS" */
+.history article a {
+    margin-top: 10px;
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 768px) {
+    .history article {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .history article div {
+        width: 100%;
+    }
+
+}
+
+/*ARTICULOS COMPLETOS AVIONES AIRBUS*/
+
+.airbus_titulo { /*Titulo para la sección Airbus*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.article-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #111;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.article h3 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: rgba(189, 144, 68, 1);
+}
+
+.article div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.article p {
+    max-width: 800px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* RESPONSIVE - Ajuste en pantallas pequeñas */
+@media (max-width: 768px) {
+
+    .article h3 {
+        font-size: 20px;
+    }
+    .article p {
+        font-size: 14px;
+    }
+}
+
+
+
+/*Pie de pagina*/
+.footer {
+    background-color: rgb(0, 0, 0); 
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.social-links a { /*Se aplica animación para marcar que es seleccionable los enlaces a redes*/ 
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: rgba(189, 144, 68, 1);
+}

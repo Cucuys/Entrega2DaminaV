@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airlines</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg custom-navbar"> <!--Boostrap / navbar:responsive / navbar-expand-md:indica cuando expandir para pantallas grandes / custom-navbar: clase creda por mi para colores--> 
+            <div class="container-fluid"> <!--container-fluid:nav ocupa todo el 100%width-->
+                
+                <a class="navbar-brand ms-5" href="./index.html"> <img src="../img/logos/logo.png" alt="Airlines"></a>
+                <a class="navbar-brand logo2" href="./index.html"> <img src="../img/logos/logo2.png" alt="Airlines"></a>
+                
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu"><spam class="navbar-toggler-icon"></spam></button>
+
+                <div class="collapse navbar-collapse" id="menu"> 
+                    <ul class="navbar-nav mx-auto gap-4"> <!--mejorar, cuando colapse a md el gap desaparezca / mx-auto permite centrar los items en la barra recordar-->
+                        <li class="nav-item"> <a class="nav-link" href="../../index.html">Inicio</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="../pages/airbus.html">Airbus</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="../pages/boeing.html">Boeing</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="../pages/sobrenosotros.html">Sobre nosotros</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="../pages/contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="airbus_titulo">Boeing</h2>
+        <section> <!--Sección de tarjetas que contendran modelos de aviones linkeados a sus respectivos html-->
+            <div class="grid-container">
+                <div class="card">
+                    <img src="../img/boeing/boeing747.jpg" alt="Avión Boeing 747">
+                    <div class="card-description">
+                        <h3><a href="#b747">Boeing 747</a></h3>
+                        <p>El Boeing 747, conocido por su doble cubierta y gran capacidad de pasajeros.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="../img/boeing/boeing737max.jpg" alt="Avión Boeing 737 MAX">
+                    <div class="card-description">
+                        <h3><a href="#b737max">Boeing 737 Max</a></h3>
+                        <p>El Boeing 737 MAX es un avión moderno y eficiente, diseñado para optimizar el consumo de combustible.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../img/boeing/boeing777x.webp" alt="Avión Boeing 777X">
+                    <div class="card-description">
+                        <h3><a href="#b777x">Boeing 777X</a></h3>
+                        <p>El Boeing 777X es un avión de última generación, con mayor eficiencia, tecnología avanzada y alas plegables.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../img/boeing/boeing787.jpg" alt="Avión Boeing 787">
+                    <div class="card-description">
+                        <h3><a href="#b787">Boeing 787</a></h3>
+                        <p>El Boeing 787 Dreamliner es un avión moderno y eficiente, diseñado con materiales compuestos para reducir el consumo de combustible.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="article-container">
+            <article class="article">
+                <div>
+                    <h3 id="boeing747">Boeing 747, un icono de los cielos</h3>
+                    <h4>Introducción</h4>
+                    <p>El Boeing 747, conocido como el "Jumbo Jet", es uno de los aviones más emblemáticos en la historia de la aviación. Introducido en la década de 1970, revolucionó los viajes aéreos al ser el primer avión de fuselaje ancho del mundo y establecer un nuevo estándar en la industria. Su diseño innovador, con una característica joroba en la parte superior del fuselaje, lo convirtió en un símbolo de la aviación comercial.</p>
+
+                    <h4>Historia y desarrollo</h4>
+                    <p>El desarrollo del Boeing 747 comenzó en la década de 1960, cuando las aerolíneas buscaban aviones con mayor capacidad para satisfacer la creciente demanda de pasajeros. Boeing, en colaboración con Pan Am, diseñó un avión capaz de transportar más de 400 pasajeros, reduciendo así los costos operativos por asiento.
+                    El primer vuelo del 747 tuvo lugar el 9 de febrero de 1969, y entró en servicio comercial en 1970 con Pan Am. Desde entonces, el avión ha sido utilizado por aerolíneas de todo el mundo.</p>
+
+                    <h4>Diseño e innovación</h4>
+                    <p>El Boeing 747 destacó por varias innovaciones:</p>
+                    <ul>
+                        <li>Doble cubierta parcial: Su icónica joroba alberga una segunda cubierta, originalmente diseñada como un espacio de descanso para la tripulación y más tarde utilizada para pasajeros en versiones posteriores.</li>
+                        <li>Motores potentes: Equipado con cuatro motores, el 747 fue diseñado para vuelos de larga distancia, permitiendo rutas intercontinentales sin escalas.</li>
+                        <li>Gran capacidad: Dependiendo de la variante, podía transportar entre 350 y más de 600 pasajeros en distintas configuraciones de asientos.</li>
+                        <li>Carga versátil: Algunas versiones, como el 747-400F y 747-8F, fueron diseñadas para el transporte de carga, con una puerta frontal abatible para facilitar la carga de mercancía de gran tamaño.</li>
+                    </ul>
+
+                    <h4>Variantes del Boeing 747</h4>
+                    <ul>
+                        <li>747-100: Primera versión, lanzada en 1970.</li>
+                        <li>747-200: Mejoras en motores y alcance.</li>
+                        <LI>747-300: Introducción de una cubierta superior más larga.</LI>
+                        <li>747-400: Una de las versiones más populares, con mayor autonomía y tecnología avanzada.</li>
+                        <li>747-8: La última versión, con mejoras aerodinámicas, motores más eficientes y mayor capacidad de carga y pasajeros.</li>
+                    </ul>
+
+                    <h4>Conclusión</h4>
+                    <P>El Boeing 747 redefinió la manera en que el mundo viaja. Su diseño innovador, su capacidad y su impacto en la aviación lo convierten en una leyenda de los cielos. Aunque su producción haya finalizado 2023, su legado permanecerá vivo en la historia de la aviación y en la memoria de quienes lo han pilotado y viajado en él.</P>
+                </div>
+            </article>
+
+            <article class="article">
+                <div>
+                    <h3 id="boeing737max">Boeing 737 MAX: Eficiencia y controversia</h3>
+                    <h4>Introducción</h4>
+                    <p>El Boeing 737 MAX es la última generación de la exitosa familia Boeing 737, diseñada para ofrecer una mayor eficiencia en el consumo de combustible, tecnología avanzada y un mejor rendimiento para aerolíneas de todo el mundo. Sin embargo, su historia ha estado marcada tanto por sus innovaciones como por la controversia derivada de dos accidentes fatales que llevaron a su inmovilización temporal.</p>
+
+                    <h4>Historia y desarrollo</h4>
+                    <p>El desarrollo del 737 MAX comenzó a principios de la década de 2010 como una respuesta de Boeing a la creciente competencia del Airbus A320neo. Con nuevos motores más eficientes y mejoras aerodinámicas, la aeronave prometía reducir los costos operativos y aumentar el alcance.</p>
+
+                    <h4>Diseño e innovaciones</h4>
+                    <p>El Boeing 737 MAX incorporó varias mejoras con respecto a generaciones anteriores:</p>
+                    <ul>
+                        <li>Motores CFM LEAP-1B: Más eficientes y silenciosos, con menor consumo de combustible.</li>
+                        <li>Winglets avanzados: Diseñados para reducir la resistencia aerodinámica y mejorar la eficiencia del vuelo.</li>
+                        <li>Cabina modernizada: Equipamiento digital de última generación y una mejor ergonomía para los pilotos.</li>
+                        <li>Sistema MCAS: Introducido para mejorar la estabilidad, aunque fue la causa principal de la crisis de seguridad.</li>
+                    </ul>
+
+                    <h4>Variantes del boeing 737 MAX</h4>
+                    <p>Boeing desarrolló múltiples versiones del 737 MAX para adaptarse a distintas necesidades operativas:</p>
+                    <ul>
+                        <li>737 MAX 7: Modelo más pequeño, ideal para aerolíneas con rutas de menor demanda.</li>
+                        <li>737 MAX 8: Versión más popular, con capacidad para más de 180 pasajeros.</li>
+                        <li>737 MAX 9: Mayor capacidad y alcance extendido.</li>
+                        <li>737 MAX 10: Variante de mayor tamaño, diseñada para competir con el Airbus A321neo.</li>
+                    </ul>
+
+                    <h4>Conclusión</h4>
+                    <p>El Boeing 737 MAX es una aeronave que combina eficiencia y tecnología avanzada, pero cuya historia también refleja los desafíos de la seguridad aérea moderna. Con su retorno al servicio y mejoras implementadas, sigue desempeñando un papel crucial en la aviación comercial global.</p>
+                </div>
+            </article>
+
+            <article class="article">
+                <div>
+                    <h3 id="boeing777x">Boeing 777X: Innovación y Eficiencia</h3>
+                    <h4>Introducción</h4>
+                    <p>El Boeing 777X es la última evolución de la exitosa familia Boeing 777, diseñado para ofrecer mayor eficiencia, tecnología avanzada y una capacidad superior en vuelos de larga distancia. Con innovaciones aerodinámicas y motores más potentes, el 777X busca establecer un nuevo estándar en la aviación comercial.</p>
+
+                    <h4>Historia y desarrollo</h4>
+                    <p>Boeing anunció el desarrollo del 777X en 2013 como respuesta a la creciente demanda de aviones de alta capacidad y bajo consumo de combustible. Con la competencia del Airbus A350, Boeing optó por modernizar el 777 en lugar de desarrollar un modelo completamente nuevo. El primer vuelo del Boeing 777X tuvo lugar el 25 de enero de 2020, y aunque su entrada en servicio se ha retrasado por certificaciones y desafíos en el desarrollo.</p>
+
+                    <h4>Diseño e innovaciones</h4>
+                    <p>El Boeing 777X incorpora varias mejoras significativas con respecto a sus predecesores:</p>
+                    <ul>
+                        <li>Alas plegables de material compuesto: Permiten una mayor eficiencia aerodinámica en vuelo y reducen la envergadura en aeropuertos.</li>
+                        <li>Motores GE9X: Los más potentes y eficientes en la aviación comercial.</li>
+                        <li>Mayor capacidad y alcance: Puede transportar hasta 426 pasajeros y volar más de 16,000 km sin escalas.</li>
+                        <li>Cabina renovada: Inspirada en el Boeing 787, con mayor confort y ventanas más grandes.</li>
+                    </ul>
+
+                    <h4>Variantes del Boeing 777X</h4>
+                    <p>Boeing ha desarrollado dos versiones principales del 777X:</p>
+                    <ul>
+                        <li>777-8: Modelo de menor capacidad pero con mayor alcance, ideal para rutas ultra largas.</li>
+                        <li>777-9: Variante de mayor tamaño, con capacidad para más pasajeros y enfocada en mercados de alta demanda.</li>
+                    </ul>
+                    
+                    <h4>Conclusión</h4>
+                    <p>El Boeing 777X representa el futuro de la aviación de larga distancia, combinando eficiencia, tecnología de vanguardia y mayor capacidad. A pesar de los desafíos en su desarrollo, se espera que redefina el transporte aéreo en las próximas décadas.</p>
+                </div>
+            </article>
+
+            <article class="article">
+                <div>
+                    <h3 id="boeing787">Boeing 787: Revolución en la aviación comercial</h3>
+                    <h4>Introducción</h4>
+                    <p>El Boeing 787 Dreamliner es un avión de última generación diseñado para revolucionar la aviación comercial con su eficiencia, confort y tecnología avanzada. Con materiales compuestos, aerodinámica mejorada y motores eficientes, el 787 ha establecido nuevos estándares en vuelos de larga distancia.</p>
+
+                    <h4>Historia y desarrollo</h4>
+                    <p>Boeing inició el desarrollo del 787 a principios de la década de 2000 como respuesta a la creciente demanda de aviones más eficientes y cómodos. Su diseño innovador, basado en materiales compuestos y sistemas avanzados, lo convirtió en un hito en la industria aeronáutica.</p>
+
+                    <h4>Diseño e innovaciones</h4>
+                    <p>El Boeing 787 destaca por su tecnología avanzada y eficiencia operativa:</p>
+                    <ul>
+                        <li>Fuselaje de fibra de carbono: Reduce el peso y mejora la eficiencia en el consumo de combustible.</li>
+                        <li>Motores Rolls-Royce Trent 1000 y General Electric GEnx: Diseñados para reducir el consumo de combustible y el ruido.</li>
+                        <li>Mayor presurización y humedad en la cabina: Proporciona mayor comodidad a los pasajeros en vuelos largos.</li>
+                        <li>Ventanas más grandes y sin persianas: Con tecnología de oscurecimiento electrónico para mejorar la experiencia a bordo.</li>
+                    </ul>
+
+                    <h4>Variantes del Boeing 787</h4>
+                    <p>El Dreamliner se encuentra disponible en tres versiones principales:</p>
+                    <ul>
+                        <li>787-8: Versión inicial con capacidad para aproximadamente 242 pasajeros y un alcance de hasta 13,530 km.</li>
+                        <li>787-9: Modelo extendido con mayor capacidad (hasta 296 pasajeros) y mayor alcance (14,010 km).</li>
+                        <li>787-10: Variante más grande con capacidad para 330 pasajeros y diseñada para rutas de alta demanda.</li>
+                    </ul>
+                    
+                    <h4>Conclusión</h4>
+                    <p>El Boeing 787 Dreamliner ha transformado la aviación con su tecnología innovadora, eficiencia de combustible y confort para los pasajeros. Su impacto en la industria aérea es significativo, y sigue siendo una de las aeronaves más avanzadas y populares del mundo.</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div>
+            <p>Todos los derechos reservados @2025</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
