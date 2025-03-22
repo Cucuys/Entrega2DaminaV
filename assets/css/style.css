@@ -1,7 +1,12 @@
 /*Configuraciones generales para BODY MAIN y H1..*/
 
-body {
+html, body {
     background-color: rgb(18, 18, 18);
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 main {
@@ -82,32 +87,38 @@ h4 {
 } /* consultar por background image como se cambia sin url el color*/
 
 
-/*TERMINAR AGREGAR DEGRADADO EN LATERALES Y OSCURECER LA IMAGEN DE FONDO, AGREGAR LAS FOTOS Y ENLACES VER MAS*/
+/*NOTICIAS*/
 
-#carouselExampleIndicators { /* se da estilo al id para no crear mas clases ya que las noticias se veran en carusel sólo en el inciio */
-    max-width: 100vw;  
-    margin: 40px auto; 
-    
-} 
-
-#carouselExampleIndicators .carousel-inner {
-    overflow: hidden; /* Para evitar que se salga la imagen */
+.news h3 {
+    color: rgba(189, 144, 68, 1);
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 5px;
 }
-
-#carouselExampleIndicators .carousel-item img { /* se especifica la clase luego del id para que la imagen tenga un alto y cubra todo el contenedor*/
-    height: 300px; 
-    object-fit: cover; 
+.grid-news {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
 }
 
 
 
 /*TARJETAS CON GRID, SE GENERA CON GRID PARA LA CONSIGNA*/
 
+.plane h3 {
+    color: rgba(189, 144, 68, 1);
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 5px;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
     gap: 20px;
-    padding: 20px;
+    padding: 10px;
     justify-content: center;
 }
 
@@ -289,7 +300,7 @@ h4 {
     line-height: 1.5;
 }
 
-/* RESPONSIVE - Ajuste en pantallas pequeñas */
+/* RESPONSIVE - Ajuste en pantallas celular */
 @media (max-width: 768px) {
 
     .article h3 {
@@ -301,6 +312,19 @@ h4 {
 }
 
 
+/*GALERIA DE IMAGENES PARA LAS HISTORIAS*/
+
+.galleryhistory {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+.galleryhistory img{
+    max-width: 400px;
+    padding: 10px;
+}
+
 
 /*Pie de pagina*/
 .footer {
@@ -308,6 +332,7 @@ h4 {
     color: white;
     padding: 10px 0;
     text-align: center;
+    margin-top: auto;
 }
 
 .social-links a { /*Se aplica animación para marcar que es seleccionable los enlaces a redes*/ 
