@@ -9,8 +9,8 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg custom-navbar"> <!--Boostrap / navbar:responsive / navbar-expand-md:indica cuando expandir para pantallas grandes / custom-navbar: clase creda por mi para colores--> 
-            <div class="container-fluid"> <!--container-fluid:nav ocupa todo el 100%width-->
+        <nav class="navbar navbar-expand-lg custom-navbar"> <!--Boostrap / navbar:responsive / navbar-expand-lg:indica cuando expandir para pantallas grandes / custom-navbar: clase creda por mi para colores--> 
+            <div class="container-fluid"> <!--container-fluid:nav ocupa todo el 100% del width-->
                 
                 <a class="navbar-brand ms-5" href="./index.html"> <img src="./assets/img/logos/logo.png" alt="Airlines"></a>
                 <a class="navbar-brand logo2" href="./index.html"> <img src="./assets/img/logos/logo2.png" alt="Airlines"></a>
@@ -18,7 +18,7 @@
                 <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu"><spam class="navbar-toggler-icon"></spam></button>
 
                 <div class="collapse navbar-collapse" id="menu"> 
-                    <ul class="navbar-nav mx-auto gap-4"> <!--mejorar, cuando colapse a md el gap desaparezca / mx-auto permite centrar los items en la barra-->
+                    <ul class="navbar-nav mx-auto gap-4"> <!--mejorar, cuando colapse a lg el gap desaparezca / mx-auto permite centrar los items en la barra-->
                         <li class="nav-item"> <a class="nav-link" href="./index.html">Inicio</a></li>
                         <li class="nav-item"> <a class="nav-link" href="./assets/pages/airbus.html">Airbus</a></li>
                         <li class="nav-item"> <a class="nav-link" href="./assets/pages/boeing.html">Boeing</a></li>
@@ -31,7 +31,7 @@
     </header>
 
     <main>
-        <section  class="welcome"> <img src="./assets/img/genericas/welcomeL.jpg"> <!--Presentación breve del contenido del sitio web-->
+        <section  class="welcome"> <img src="./assets/img/genericas/welcomeL.jpg"> <!--Benvenida a la web-->
             <div class="welcome_description">
                 <h1>Bienvenidos a Airlines</h1>
                 <h2>Explora el mundo de la aviación comercial</h2>
@@ -39,69 +39,69 @@
             </div>
         </section> 
         
-        <!--NOTICIAS-->
+        <!--RESUMEN NOTICIAS-->
         <section class="news">
-            <h3>NOTICIAS</h3> 
+            <h3>Noticias</h3> 
             <div class="grid-news">
                 <div class="card">
                     <img src="./assets/img/noticias/noticia1lat.jpg" alt="Noticia LATAM">
                     <div class="card-description">
-                        <h3><a href="./assets/pages/noticias/noticias.html">LATAM</a></h3>
+                        <h3><a href="./assets/pages/noticias/noticias.html#latam">LATAM</a></h3>
                         <p>LATAM transporta más de 6,5 millones de pasajeros en Febrero 2025</p>
                     </div>
                 </div>
                 <div class="card">
                     <img src="./assets/img/noticias/noticia2aireuropa.jpg" alt="Noticia Air Europa">
                     <div class="card-description">
-                        <h3><a href="#">Air Europa</a></h3>
+                        <h3><a href="./assets/pages/noticias/noticias.html#aireuropa">Air Europa</a></h3>
                         <p>Air Europa conectará Madrid y Praga gracias al acuerdo de código compartido con Smartwings</p>
                     </div>
                 </div>
                 <div class="card">
                     <img src="./assets/img/noticias/noticia3tap.jpg" alt="Noticia TAP">
                     <div class="card-description">
-                        <h3><a href="#">TAP Air Portugal</a></h3>
+                        <h3><a href="./assets/pages/noticias/noticias.html#tap">TAP Air Portugal</a></h3>
                         <p>TAP Air Portugal celebra 80 años conectando el mundo</p>
                     </div>
                 </div>
                 
             </div>
         </section>
-        <section class="plane"> <!--Sección de tarjetas que contendran modelos de aviones linkeados a sus respectivos html-->
+        <section class="plane"> <!--SECCION CON TARJETA RESUMIDAS DE MODELOS DE AVIONES QUE LLEVAN A SUS HTML-->
             <h3>Aviones</h3>
             <div class="grid-container">
                 <div class="card">
                     <img src="./assets/img/boeing/boeing737max.jpg" alt="Avion Boeing 737 MAX">
                     <div class="card-description">
-                        <h3><a href="#">Boeing 737 MAX</a></h3>
-                        <p>Un avión eficiente para vuelos regionales con tecnología moderna y menor consumo de combustible.</p>
+                        <h3><a href="./assets/pages/boeing.html#boeing737max">Boeing 737 MAX</a></h3>
+                        <p>El Boeing 737 Max, un avión eficiente para vuelos regionales con tecnología moderna y menor consumo de combustible.</p>
                     </div>
                 </div>
                 <div class="card">
                     <img src="./assets/img/airbus/a220.jpg" alt="Avión Airbus A220">
                     <div class="card-description">
-                        <h3><a href="#">Airbus A220</a></h3>
-                        <p>Modernidad en la aviación Regional.</p>
+                        <h3><a href="./assets/pages/airbus.html#a220">Airbus A220</a></h3>
+                        <p>Airbus A220, modernidad en la aviación Regional.</p>
                     </div>
                 </div>
                 <div class="card">
                     <img src="./assets/img/boeing/boeing747.jpg" alt="Avión Boeing 747">
                     <div class="card-description">
-                        <h3><a href="#">Boeing 747</a></h3>
-                        <p>El icónico jumbo jet, conocido por su doble cubierta y gran capacidad de pasajeros.</p>
+                        <h3><a href="./assets/pages/boeing.html#boeing747">Boeing 747</a></h3>
+                        <p>El Boeing 747, icónico jumbo jet, conocido por su doble cubierta y gran capacidad de pasajeros.</p>
                     </div>
                 </div>
                 <div class="card">
                     <img src="./assets/img/airbus/a320neo.jpg" alt="Avión Boeing A320 NEO">
                     <div class="card-description">
-                        <h3><a href="#"> Airbus A320 NEO</a></h3>
-                        <p>Sostenibilidad en la aviación comercial.</p>
+                        <h3><a href="./assets/pages/airbus.html#a320neo"> Airbus A320 NEO</a></h3>
+                        <p>El Airbus A320 NEO, sostenibilidad en la aviación comercial.</p>
                     </div>
                 </div>
             </div>
         </section>
         
-        <section class="history"> <!--Sección con historias de vuelos con incidentes-->
+        <section class="history"> <!--SECCIÓN RESUMEN DE HISTORIAS DE VUELOS CON INCIDENTES-->
             <h2>Pilotos y vuelos heroicos</h2>
             <article>
                 <div>
@@ -134,7 +134,7 @@
             <div>
                 <p>Todos los derechos reservados @2025</p>
                 <div class="social-links">
-                    <a href="#">Facebook</a>
+                    <a href="#">Facebook</a> <!--No hay redes sociales por lo cual no redirigen aún-->
                     <a href="#">Instagram</a>
                     <a href="#">WhatsApp</a>
                 </div>

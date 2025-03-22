@@ -29,7 +29,7 @@ h4 {
 
 
 
-
+/*BIENVENIDA A LA PAGINA*/
 .welcome { /*Se centran todos los items y texto,se genera un background con un gradiente para no editar la imagen original así se puede ver con contraste el texto*/
     position: relative;
     width: 100vw;
@@ -60,6 +60,7 @@ h4 {
     z-index: -1;
 }
 
+/*NAVBAR CON BOOSTRAP EDITADA CON CSS*/
 .custom-navbar {
     background-color: black;
 }
@@ -70,7 +71,7 @@ h4 {
 }
 
 .navbar-brand img {
-    height: 70px; /*tamaño del logo*/
+    height: 70px; 
 }
 
 .custom-navbar .nav-link{
@@ -78,16 +79,16 @@ h4 {
 }
 
 .custom-navbar .navbar-toggler {
-    border: none; /*quitar el borde del menú hamburguesa dejar 3 lineas */
+    border: none; /*quitar el borde del menú hamburguesa, dejar 3 lineas solamente */
 }
 
 .custom-navbar .navbar-toggler-icon { 
     background-color: black;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28189, 144, 68, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-} /* consultar por background image como se cambia sin url el color*/
+} /* consultar por background image como se cambia sin url el color de las 3 lineas del menu hamburguesa, en el enlace del URL se cambió la parte del URL "rgba%" para poder cambiar el color*/
 
 
-/*NOTICIAS*/
+/*SECCIÓN DE NOTICIAS*/
 
 .news h3 {
     color: rgba(189, 144, 68, 1);
@@ -105,7 +106,7 @@ h4 {
 
 
 
-/*TARJETAS CON GRID, SE GENERA CON GRID PARA LA CONSIGNA*/
+/*TARJETAS CON GRID QUE SE UTILIZARON EN VARIAS SECCIONES DEL SITIO, SE GENERA CON GRID PARA LA CONSIGNA*/
 
 .plane h3 {
     color: rgba(189, 144, 68, 1);
@@ -130,7 +131,7 @@ h4 {
     background: black; 
 }
 
-/* Se editó la imagen para que aparezca con difuminada hasta que que interactue con el mouse */
+/* Se editó la imagen para que aparezca con difuminada hasta que interactue con el mouse */
 .card img {
     width: 100%;
     height: 100%;
@@ -191,11 +192,7 @@ h4 {
     }
 }
 
-
-
-/*SECCION DE PILOTOS HEROICOS*/
-
-/* CONTENEDOR DEL RESUMEN DE LAS HISTORIAS */
+/*SECCION DE PILOTOS Y VUELOS HEROICOS, CONTENEDOR DEL RESUMEN DE LAS HISTORIAS*/
 .history {
     display: flex;
     flex-direction: column;
@@ -212,7 +209,7 @@ h4 {
     margin-bottom: 20px;
 }
 
-/* ESTILO DE LOS ARTÍCULOS */
+/* Estilo de articulos*/
 .history article {
     display: flex;
     justify-content: space-between;
@@ -225,13 +222,12 @@ h4 {
     position: relative;
 }
 
-/* ESTILO DEL TÍTULO DEL ARTÍCULO */
 .history article h4 {
     font-size: 20px;
     margin-bottom: 10px;
 }
 
-/* BOTÓN DE "VER MÁS" */
+/*Boton de "ver más"*/
 .history article a {
     margin-top: 10px;
     color: #ffcc00;
@@ -253,9 +249,8 @@ h4 {
 
 }
 
-/*ARTICULOS COMPLETOS AVIONES AIRBUS*/
-
-.airbus_titulo { /*Titulo para la sección Airbus*/
+/*ARTICULOS COMPLETOS AVIONES AIRBUS Y BOEING*/
+.titles { /*Titulo para la sección Airbus y Boeing*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -273,7 +268,7 @@ h4 {
     display: flex;
     flex-direction: column;
     position: relative;
-    background-color: #111;
+    background-color: black;
     color: white;
     padding: 20px;
     border-radius: 10px;
@@ -300,7 +295,7 @@ h4 {
     line-height: 1.5;
 }
 
-/* RESPONSIVE - Ajuste en pantallas celular */
+/*Ajuste en pantallas celular */
 @media (max-width: 768px) {
 
     .article h3 {
@@ -312,8 +307,7 @@ h4 {
 }
 
 
-/*GALERIA DE IMAGENES PARA LAS HISTORIAS*/
-
+/*GALERIA DE IMAGENES PARA LAS PAGE DE HISTORIAS*/
 .galleryhistory {
     display: flex;
     flex-flow: wrap;
@@ -325,8 +319,72 @@ h4 {
     padding: 10px;
 }
 
+/*ESTILO PARA EL FOMULARIO DE CONTACTO*/
+.contact {
+    text-align: center;
+    margin: 20px;
+}
 
-/*Pie de pagina*/
+.form-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px; 
+    margin: 0 auto; 
+}
+
+/*Estilo para los labels*/
+.form-contact label {
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/*Estilo para los inputs y textarea*/
+.form-contact input,
+.form-contact textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid rgba(189, 144, 68, 1);
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-contact input:focus,
+.form-contact textarea:focus {
+    border-color: rgba(189, 144, 68, 0.8); /*Se cambia el color cuando esté el ratón encima*/
+}
+
+/* Estilo para el botón */
+.form-contact button {
+    background-color: rgba(189, 144, 68, 1);
+    color: white;
+    font-size: 16px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.form-contact button:hover {
+    background-color: rgba(189, 144, 68, 0.8); /* Cambio de color al pasar el ratón */
+}
+
+/* Estilo para el área de texto */
+.form-contact textarea {
+    resize: vertical; /* Acordar, permite redimensionar solo verticalmente*/
+    min-height: 100px;
+}
+
+
+
+/*PIE DE PAGINA*/
 .footer {
     background-color: rgb(0, 0, 0); 
     color: white;
@@ -335,7 +393,7 @@ h4 {
     margin-top: auto;
 }
 
-.social-links a { /*Se aplica animación para marcar que es seleccionable los enlaces a redes*/ 
+.social-links a { /*Se aplica animación para marcar que es seleccionable los enlaces a redes, no hay redes para el sitio así que no están enlazdas aún*/ 
     color: white;
     text-decoration: none;
     font-weight: bold;
