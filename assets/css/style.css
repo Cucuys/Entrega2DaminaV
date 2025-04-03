@@ -402,7 +402,7 @@ h4 {
 /*ESTILO PARA EL FOMULARIO DE CONTACTO*/
 .contact {
     text-align: center;
-    margin: 20px;
+    margin: 20px 5px 20px 5px;
 }
 
 .form-contact {
