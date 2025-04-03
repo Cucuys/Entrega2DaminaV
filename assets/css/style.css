@@ -1,5 +1,7 @@
 /*Configuraciones generales para BODY MAIN y H1..*/
 
+/*Configuraciones generales para BODY MAIN y H1..*/
+
 *{
     margin:0;
     padding:0;
@@ -9,6 +11,7 @@
 
 html, body {
     background-color:#014D69;
+    zoom: 0%;
 
 }
 
