@@ -222,6 +222,11 @@ h4 {
     transition: background-color 0.5s ease, transform 0.5s ease, color 0.5s ease, border-color 0.5s ease; /* Agrega suavidad a la animación tanto al poner el raton o sacarlo */
 }
 
+.read-more a {
+    color: #F0F4F9;
+    text-decoration: none;
+}
+
 .read-more:hover {
     background-color: #F0F4F9; /* Cambio de color al pasar el ratón */
     transform: scale(1.15); /* Escala ligeramente el botón */
@@ -235,22 +240,23 @@ h4 {
     .container {
         flex-direction: column; /* Cambia la dirección del flexbox a columna */
         align-items: center; /* Centra los elementos */
+        width: 90%; /*..*/
     }
     
     .card-image img{
         border-radius: 20px;
-        width: 400px;
+        width: 300px;
         height: 200px;
         object-fit:cover;
         object-position:bottom;
-        
+        margin-left: 50px;
     }
     .card-text{
         border-radius: 20px;
-        margin: -30px auto;
+        margin: -70px auto;
         margin-bottom: -50px;
         height: 70px;
-        width: 400px;
+        width: 300px;
         background-color: #0B87BA;
         color:#F0F4F9;
         padding: 20px;
@@ -325,10 +331,15 @@ h4 {
 
 /* Adaptación para celulares */
 @media (max-width: 768px) {
+    
+    .history {
+        padding: 0;
+    }
+
     .history article {
         flex-direction: column;
         text-align: center;
-        padding: 15px;
+        padding: 10px;
     }
 
     .history article div {
