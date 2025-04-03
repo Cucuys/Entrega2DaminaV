@@ -12,6 +12,11 @@ html, body {
 
 }
 
+@media (max-width: 900px) {
+    body { min-width: 425px;
+    }
+}
+
 main {
     color: #F0F4F9;
 }
