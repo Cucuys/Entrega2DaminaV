@@ -6,24 +6,34 @@
     <title>Airlines</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg custom-navbar"> <!--Boostrap / navbar:responsive / navbar-expand-lg:indica cuando expandir para pantallas grandes / custom-navbar: clase creda por mi para colores--> 
-            <div class="container-fluid"> <!--container-fluid:nav ocupa todo el 100%width-->
-                
-                <a class="navbar-brand ms-5" href="../../index.html"> <img src="../img/logos/logo.png" alt="Logo Airlines"></a>
-                <a class="navbar-brand logo2" href="../../index.html"> <img src="../img/logos/logo2.png" alt="Logo Airlines"></a>
-                
-                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu"><spam class="navbar-toggler-icon"></spam></button>
 
-                <div class="collapse navbar-collapse" id="menu"> 
-                    <ul class="navbar-nav mx-auto gap-4"> <!--mejorar, cuando colapse a md el gap desaparezca / mx-auto permite centrar los items en la barra recordar-->
-                        <li class="nav-item"> <a class="nav-link" href="../../index.html">Inicio</a></li>
-                        <li class="nav-item"> <a class="nav-link" href="../pages/airbus.html">Airbus</a></li>
-                        <li class="nav-item"> <a class="nav-link" href="../pages/boeing.html">Boeing</a></li>
-                        <li class="nav-item"> <a class="nav-link" href="../pages/sobrenosotros.html">Sobre nosotros</a></li>
-                        <li class="nav-item"> <a class="nav-link" href="../pages/contacto.html">Contacto</a></li>
+<body>
+    <header> <!--NAV BAR CON BOOSTRAP Y CSS-->
+        <nav class="navbar navbar-expand-lg custom-navbar">
+            <div class="container-fluid">
+                <h1><a class="navbar-brand" href="../../index.html">Airlines</a></h1>
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav mx-auto gap-4">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./airbus.html">Airbus</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./boeing.html">Boeing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./sobrenosotros.html">Sobre nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contacto.html">Contacto</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -31,43 +41,48 @@
     </header>
 
     <main>
-        <h2 class="titles">Boeing</h2>
-        <section> <!--Sección de tarjetas que contienen modelos de aviones linkeados a sus respectivos id-->
-            <div class="grid-container">
-                <div class="card">
-                    <img src="../img/boeing/boeing747.jpg" alt="Avión Boeing 747">
-                    <div class="card-description">
-                        <h3><a href="#boeing747">Boeing 747</a></h3>
-                        <p>El Boeing 747, conocido por su doble cubierta y gran capacidad de pasajeros.</p>
-                    </div>
-                </div>
+        <div class="title_1">
+            <h2>Boeing</h2>
+            <p>Explorando una de las companias mas conocidas de la aviación.</p>
+        </div>
 
-                <div class="card">
-                    <img src="../img/boeing/boeing737max.jpg" alt="Avión Boeing 737 MAX">
-                    <div class="card-description">
-                        <h3><a href="#boeing737max">Boeing 737 Max</a></h3>
-                        <p>El Boeing 737 MAX es un avión moderno y eficiente, diseñado para optimizar el consumo de combustible.</p>
-                    </div>
+        <section class="container">
+            <div class="card">
+                <div class="card-image">
+                <img src="../img/boeing/boeing747.jpg">
                 </div>
-                <div class="card">
-                    <img src="../img/boeing/boeing777x.webp" alt="Avión Boeing 777X">
-                    <div class="card-description">
-                        <h3><a href="#boeing777x">Boeing 777X</a></h3>
-                        <p>El Boeing 777X es un avión de última generación, con mayor eficiencia, tecnología avanzada y alas plegables.</p>
-                    </div>
+                <div class="card-text">
+                    <h2 class="card-title">Boeing 747</h2>
+                    <p class="card-body">El Boeing 747, conocido por su doble cubierta y gran capacidad de pasajeros.</p>
                 </div>
-                <div class="card">
-                    <img src="../img/boeing/boeing787.jpg" alt="Avión Boeing 787">
-                    <div class="card-description">
-                        <h3><a href="#boeing787">Boeing 787</a></h3>
-                        <p>El Boeing 787 Dreamliner es un avión moderno y eficiente, diseñado con materiales compuestos para reducir el consumo de combustible.</p>
-                    </div>
+                <div class="read-more"><a href="#boeing747">Ir</a></div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                <img src="../img/boeing/boeing737max.jpg">
                 </div>
+                <div class="card-text">
+                    <h2 class="card-title">Boeing 737 MAX</h2>
+                    <p class="card-body">El Boeing 737 Max, un avión eficiente para vuelos regionales con tecnología moderna y menor consumo de combustible.</p>
+                </div>
+                <div class="read-more"><a href="#boeing737max">Ir</a></div>
+            </div>
+            
+            <div class="card">
+                <div class="card-image">
+                <img src="../img/boeing/boeing787.jpg">
+                </div>
+                <div class="card-text">
+                    <h2 class="card-title">Boeing 787</h2>
+                    <p class="card-body">El Boeing 787 Dreamliner es un avión moderno y eficiente, diseñado con materiales compuestos para reducir el consumo de combustible.</p>
+                </div>
+                <div class="read-more"><a href="#boeing787">Ir</a></div>
             </div>
         </section>
 
-        <section class="article-container">
-            <article class="article">
+        <section class="history">
+            <article>
                 <div>
                     <h3 id="boeing747">Boeing 747, un icono de los cielos</h3>
                     <h4>Introducción</h4>
@@ -100,7 +115,7 @@
                 </div>
             </article>
 
-            <article class="article">
+            <article>
                 <div>
                     <h3 id="boeing737max">Boeing 737 MAX: Eficiencia y controversia</h3>
                     <h4>Introducción</h4>
@@ -132,37 +147,7 @@
                 </div>
             </article>
 
-            <article class="article">
-                <div>
-                    <h3 id="boeing777x">Boeing 777X: Innovación y Eficiencia</h3>
-                    <h4>Introducción</h4>
-                    <p>El Boeing 777X es la última evolución de la exitosa familia Boeing 777, diseñado para ofrecer mayor eficiencia, tecnología avanzada y una capacidad superior en vuelos de larga distancia. Con innovaciones aerodinámicas y motores más potentes, el 777X busca establecer un nuevo estándar en la aviación comercial.</p>
-
-                    <h4>Historia y desarrollo</h4>
-                    <p>Boeing anunció el desarrollo del 777X en 2013 como respuesta a la creciente demanda de aviones de alta capacidad y bajo consumo de combustible. Con la competencia del Airbus A350, Boeing optó por modernizar el 777 en lugar de desarrollar un modelo completamente nuevo. El primer vuelo del Boeing 777X tuvo lugar el 25 de enero de 2020, y aunque su entrada en servicio se ha retrasado por certificaciones y desafíos en el desarrollo.</p>
-
-                    <h4>Diseño e innovaciones</h4>
-                    <p>El Boeing 777X incorpora varias mejoras significativas con respecto a sus predecesores:</p>
-                    <ul>
-                        <li>Alas plegables de material compuesto: Permiten una mayor eficiencia aerodinámica en vuelo y reducen la envergadura en aeropuertos.</li>
-                        <li>Motores GE9X: Los más potentes y eficientes en la aviación comercial.</li>
-                        <li>Mayor capacidad y alcance: Puede transportar hasta 426 pasajeros y volar más de 16,000 km sin escalas.</li>
-                        <li>Cabina renovada: Inspirada en el Boeing 787, con mayor confort y ventanas más grandes.</li>
-                    </ul>
-
-                    <h4>Variantes del Boeing 777X</h4>
-                    <p>Boeing ha desarrollado dos versiones principales del 777X:</p>
-                    <ul>
-                        <li>777-8: Modelo de menor capacidad pero con mayor alcance, ideal para rutas ultra largas.</li>
-                        <li>777-9: Variante de mayor tamaño, con capacidad para más pasajeros y enfocada en mercados de alta demanda.</li>
-                    </ul>
-                    
-                    <h4>Conclusión</h4>
-                    <p>El Boeing 777X representa el futuro de la aviación de larga distancia, combinando eficiencia, tecnología de vanguardia y mayor capacidad. A pesar de los desafíos en su desarrollo, se espera que redefina el transporte aéreo en las próximas décadas.</p>
-                </div>
-            </article>
-
-            <article class="article">
+            <article>
                 <div>
                     <h3 id="boeing787">Boeing 787: Revolución en la aviación comercial</h3>
                     <h4>Introducción</h4>
@@ -196,12 +181,41 @@
     </main>
 
     <footer class="footer">
-        <div>
-            <p>Todos los derechos reservados @2025</p>
-            <div class="social-links">
-                <a href="https://www.facebook.com" target="_blank">Facebook</a> <!--No hay redes sociales por lo cual se redirige a la pagina principal de cada red-->
-                <a href="https://www.instagram.com" target="_blank">Instagram</a>
-                <a href="https://api.whatsapp.com/" target="_blank">WhatsApp</a>
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-links">
+                    <h4>Airlines</h4>
+                    <ul>
+                        <li><a href="./sobrenosotros.html">Sobre nosotros</a></li>
+                        <li><a href="./contacto.html">Contacto</a></li>
+                        <li><a href="./contacto.html">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Información</h4>
+                    <ul>
+                        <li><a href="./airbus.html">Airbus</a></li>
+                        <li><a href="./boeing.html">Boeing</a></li>
+                        <li><a href="../../index.html">Nuestro inicio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Paginas oficiales</h4>
+                    <ul>
+                        <li><a href="https://www.airbus.com/en" target="_blank">Oficial Airbus</a></li>
+                        <li><a href="https://www.boeing.com/" target="_blank">Oficial Boeing</a></li>
+                        <li><a href="https://www.faa.gov/" target="_blank">Oficial FAA</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Redes</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/?lang=es" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://web.whatsapp.com/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>

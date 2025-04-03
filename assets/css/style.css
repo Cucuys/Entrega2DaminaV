@@ -1,58 +1,86 @@
 /*Configuraciones generales para BODY MAIN y H1..*/
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Playfair Display', serif;
+}
+
 html, body {
-    background-color: rgb(18, 18, 18);
-    box-sizing: border-box;
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
+    background-color:#014D69;
+
 }
 
 main {
-    background-color: rgb(18, 18, 18);
-    color: white;
+    color: #F0F4F9;
 }
 
 h1 {
-    color: rgba(189, 144, 68, 1);
+    color: #F3AE5F;
 }
 
 h2 {
-    color: rgba(189, 144, 68, 1);
+    color: #F0F4F9;
+}
+
+h3 {
+    font-weight: 800;
 }
 
 h4 {
-    color: rgb(255, 255, 255);
+    color: #F0F4F9;
+    font-weight: 800;
 }
-
-
-
 
 /*BIENVENIDA A LA PAGINA*/
 .welcome { /*Se centran todos los items y texto,se genera un background con un gradiente para no editar la imagen original así se puede ver con contraste el texto*/
     position: relative;
-    width: 100vw;
-    height: 70vh; 
+    width: 100%;
+    height: 40vh; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
+    color: #F0F4F9;
     padding: 20px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), 
                 url("../img/genericas/welcomeL.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    border-bottom: 3px solid #F3AE5F;
+    border-top: 3px solid #F3AE5F;
+    margin-top: 20px;
     }
 
-.welcome_description {
-    margin-top: 32vh;
-}
+    .welcome_description { /*Se oculta el texto al principio*/
+        opacity: 0; 
+        transform: translateY(20px); 
+        animation: fadeInSlideUp 1s ease-in-out forwards;
+    }
+    
+    .welcome_description h1 { /*Se prueban varios tiempo de restraso, afinar antes de cargar a git*/
+        animation-delay: 0.2s;
+    }
+    
+    .welcome_description h2 {
+        animation-delay: 0.4s;
+    }
+    
+    .welcome_description p {
+        animation-delay: 0.6s;
+    }
+    
+    @keyframes fadeInSlideUp { /*Se genera una anicamción con keyframe*/
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 
-.welcome img { /*se configura la imagen para que quede al fondo y encaje sin deformarse en vista movile o desktop*/
+.welcome img { /*se configura la imagen para que quede al fondo y encaje sin deformarse en vista celular o desktop*/
     position: absolute;
     width: 100%;
     height: 100%;
@@ -62,135 +90,189 @@ h4 {
 
 /*NAVBAR CON BOOSTRAP EDITADA CON CSS*/
 .custom-navbar {
-    background-color: black;
+    background-color: #014D69; /* Fondo */
+    padding: 1rem 0; 
+    border-bottom: 8px solid #F3AE5F;
+    border-radius: 80px;
 }
 
-.logo2 img {
-    width: 200px;
-    height: auto;
+.custom-navbar .navbar-brand {
+    color: #F3AE5F; /* Color para el logo y otras partes de la web */
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    margin-left: 1rem; 
 }
 
-.navbar-brand img {
-    height: 70px; 
+.custom-navbar .nav-link {
+    color: #F3AE5F; /* Color de los items de barra nav */
+    position: relative; /* Para posicionar la linea debajo de cada item */
+    padding: 0.5rem 0; 
+    text-decoration: none; 
 }
 
-.custom-navbar .nav-link{
-    color: rgba(189, 144, 68, 1);
+.custom-navbar .nav-link::after {
+    content: ''; /*Se crea un pseudo elemento para la linea animada al pasar el raton por los items del nav bar */
+    position: absolute; /* Se posiciona la linea para que siempre aparezca debajo del item*/
+    bottom: -5px; /* Recordar cambiar la distancia de la linea del item para que no se superponga */
+    left: 0; 
+    width: 100%; /*La linea cubre todo el largo del item en el nav*/
+    height: 3px; /* Recordar establecer un ancho*/
+    background-color: #F3AE5F;
+    transform: scaleX(0); /*Se esconde la linea hasta pasar el ratón*/
+    transition: transform 0.3s ease-in-out; 
+}
+
+.custom-navbar .nav-link:hover::after {
+    transform: scaleX(1); 
 }
 
 .custom-navbar .navbar-toggler {
-    border: none; /*quitar el borde del menú hamburguesa, dejar 3 lineas solamente */
+    border: none; /*Sólo se dejan las 3 linea del borde hamburguesa*/
 }
 
-.custom-navbar .navbar-toggler-icon { 
-    background-color: black;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28189, 144, 68, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-} /* consultar por background image como se cambia sin url el color de las 3 lineas del menu hamburguesa, en el enlace del URL se cambió la parte del URL "rgba%" para poder cambiar el color*/
+.custom-navbar .navbar-toggler-icon {
+    background-color: transparent; 
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28189, 144, 68, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); /* Cambia el icono del menú hamburguesa a un SVG con líneas doradas */
+}
+
+@media (max-width: 900px) {
+    .custom-navbar .navbar-nav {
+        text-align: center; /*Si bien se usa boostrap se genera este media para centrar el menu en celulares*/
+    }
+}
 
 
-/*SECCIÓN DE NOTICIAS*/
+/*TARJETAS, SE UTILIZARON EN VARIAS SECCIONES DEL SITIO*/
 
-.news h3 {
-    color: rgba(189, 144, 68, 1);
+.title_1{
+    margin-top: 100px;
+}
+
+.title_1 h2{
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 5px;
-}
-.grid-news {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 20px;
-    padding: 20px;
-    justify-content: center;
+    font-size: 3rem;
 }
 
-
-
-/*TARJETAS CON GRID QUE SE UTILIZARON EN VARIAS SECCIONES DEL SITIO, SE GENERA CON GRID PARA LA CONSIGNA*/
-
-.plane h3 {
-    color: rgba(189, 144, 68, 1);
+.title_1 p{
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 5px;
+    font-size: 1.5rem;
 }
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 20px;
-    padding: 10px;
-    justify-content: center;
-}
-
-.card { /* Se le da estilo a la tarjeta */
-    position: relative;
+.container{
+    border-bottom: 3px solid #F3AE5F;
+    border-top: 8px solid #F3AE5F;
+    border-radius: 20px;
     width: 100%;
-    height: 300px;
-    overflow: hidden;
-    background: black; 
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    background-color: #F0F4F9;
+    
 }
-
-/* Se editó la imagen para que aparezca con difuminada hasta que interactue con el mouse */
-.card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: blur(5px); 
-    transition: filter 0.5s ease;
-}
-
-/* Descripció con el texto centrado y fondo opaco*/
-.card-description {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+.card{
+    border-color: transparent;
     display: flex;
     flex-direction: column;
+    width: 400px;
+    margin-bottom: 60px;
+    background-color: transparent
+}
+
+
+.card-image img{
+    border-radius: 20px;
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+    object-position: bottom;
+    border-top: 3px solid #F3AE5F;
+}
+.card-text{
+    border-radius: 20px;
+    margin: -30px auto;
+    margin-bottom: -50px;
+    height: 300px;
+    width: 300px;
+    background-color: #0B87BA;
+    color: #F0F4F9;
+    padding: 20px;
+}
+
+.card-title{
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+.card-body{
+    font-size: 1.2rem;
+}
+.read-more{
+    border-radius: 20px;
+    width: 100px;
+    height: 30px;
+    background-color:#014D69;
+    color:#F0F4F9;
+    margin-left:auto;
+    font-size: 1rem;
+    display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 15px;
+    border-bottom: 3px solid #F3AE5F;
+    border-top: 3px solid #F3AE5F;
+    transition: background-color 0.5s ease, transform 0.5s ease, color 0.5s ease, border-color 0.5s ease; /* Agrega suavidad a la animación tanto al poner el raton o sacarlo */
 }
 
-.card-description h3 { /* Título centrado con animacion*/
-    font-size: 26px;
-    margin: 0;
-    opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+.read-more:hover {
+    background-color: #F0F4F9; /* Cambio de color al pasar el ratón */
+    transform: scale(1.15); /* Escala ligeramente el botón */
+    color: #014D69;
+    border-bottom: 3px solid #F3AE5F;
+    border-top: 3px solid #F3AE5F;
+    
 }
 
-.card-description h3 a { /* Se le quita la decoración y se le da color al titulo */
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-}
-
-.card:hover img { /* Al pasar el ratón por encima se pierde el blur de la img */
-    filter: blur(0px); 
-}
-
-.card:hover h3 { /*Para centrar el titulo una vez aparezca pasando el ratón*/
-    opacity: 1;
-    transform: translateY(0); 
-}
-
-/* Se cambia el estilo para celular, una tarjeta por fila y se oculta la descripción para ahorrar espacio */
-@media (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: 1fr; 
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column; /* Cambia la dirección del flexbox a columna */
+        align-items: center; /* Centra los elementos */
+    }
+    
+    .card-image img{
+        border-radius: 20px;
+        width: 400px;
+        height: 200px;
+        object-fit:cover;
+        object-position:bottom;
+        
+    }
+    .card-text{
+        border-radius: 20px;
+        margin: -30px auto;
+        margin-bottom: -50px;
+        height: 70px;
+        width: 400px;
+        background-color: #0B87BA;
+        color:#F0F4F9;
+        padding: 20px;
+    }
+    .read-more {
+        width:80px;
+        height:30px;
+        margin-right: 20px;
+    }
+    
+    .card-title{
+        font-size:1.5rem;
+        
     }
 
-    .card {
-        height: 150px;
-    }
-
-    .card-description p {
-        display: none; 
+    .card-body {
+        display: none;
     }
 }
+
+
+
 
 /*SECCION DE PILOTOS Y VUELOS HEROICOS, CONTENEDOR DEL RESUMEN DE LAS HISTORIAS*/
 .history {
@@ -209,30 +291,36 @@ h4 {
     margin-bottom: 20px;
 }
 
+.history h3 a {
+    color: #F0F4F9;
+    transition: all .3s ease;
+}
+
+.history h3 a:hover {
+    color: #F3AE5F;
+    padding-left: 6px;
+}
+
+
 /* Estilo de articulos*/
 .history article {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(189, 144, 68, 1); 
+    background: #F0F4F9; 
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
-    color: white;
+    color: #014D69;
     position: relative;
+    border-bottom: 3px solid #F3AE5F;
+    border-top: 8px solid #F3AE5F;
 }
 
 .history article h4 {
     font-size: 20px;
     margin-bottom: 10px;
-}
-
-/*Boton de "ver más"*/
-.history article a {
-    margin-top: 10px;
-    color: #ffcc00;
-    text-decoration: none;
-    font-weight: bold;
+    color: #D38F5E ;
 }
 
 /* Adaptación para celulares */
@@ -249,74 +337,48 @@ h4 {
 
 }
 
-/*ARTICULOS COMPLETOS AVIONES AIRBUS Y BOEING*/
-.titles { /*Titulo para la sección Airbus y Boeing*/
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-.article-container {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    padding: 20px;
-}
-
-.article {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    background-color: rgb(18, 18, 18);
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.article h3 {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: rgba(189, 144, 68, 1);
-}
-
-.article div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.article p {
-    max-width: 800px;
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-/*Ajuste en pantallas celular */
-@media (max-width: 768px) {
-
-    .article h3 {
-        font-size: 20px;
-    }
-    .article p {
-        font-size: 14px;
-    }
-}
-
-
 /*GALERIA DE IMAGENES PARA LAS PAGE DE HISTORIAS*/
 .galleryhistory {
-    display: flex;
-    flex-flow: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
 }
 
-.galleryhistory img{
-    max-width: 400px;
-    padding: 10px;
+.gallery-item {
+    position: relative;
+    overflow: hidden; /* Evita que las imágenes se desborden */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para llenar el contenedor */
+    display: block; /* Elimina el espacio adicional debajo de la imagen */
+}
+
+/*ESTILO PREGUNTAS FRECUENTES*/
+
+.accordion {
+    border-top: solid 8px #F3AE5F;
+    border-radius: 14px;
+    border-bottom: solid 8px #F3AE5F;
+}
+
+.accordion-button {
+    background-color: #F0F4F9;
+}
+
+.accordion-collapse {
+    background-color: #F3AE5F;
+    color: #014D69;
 }
 
 /*ESTILO PARA EL FOMULARIO DE CONTACTO*/
@@ -329,18 +391,19 @@ h4 {
     display: flex;
     flex-direction: column;
     gap: 15px; 
-    background-color: white;
+    background-color:#F0F4F9;
     padding: 20px;
     border-radius: 8px;
     width: 100%;
     max-width: 500px; 
     margin: 0 auto; 
+    border-top: solid 10px #F3AE5F;
 }
 
 /*Estilo para los labels*/
 .form-contact label {
     font-size: 14px;
-    color: black;
+    color: #014D69;
     font-weight: bold;
     margin-bottom: 5px;
 }
@@ -350,21 +413,24 @@ h4 {
 .form-contact textarea {
     padding: 10px;
     font-size: 16px;
-    border: 2px solid rgba(189, 144, 68, 1);
+    border: 2px solid #F3AE5F;
     border-radius: 4px;
     outline: none;
     transition: border-color 0.3s ease;
+    color: #014D69;
+    border-top: solid 3px #F3AE5F;
+    border-radius: 10px;
 }
 
 .form-contact input:focus,
 .form-contact textarea:focus {
-    border-color: rgba(189, 144, 68, 0.8); /*Se cambia el color cuando esté el ratón encima*/
+    border-color: #F3AE5F; /*Se cambia el color cuando esté el ratón encima*/
 }
 
 /* Estilo para el botón */
 .form-contact button {
-    background-color: rgba(189, 144, 68, 1);
-    color: white;
+    background-color: #F3AE5F;
+    color: #F0F4F9;
     font-size: 16px;
     padding: 12px 20px;
     border: none;
@@ -373,7 +439,7 @@ h4 {
 }
 
 .form-contact button:hover {
-    background-color: rgba(189, 144, 68, 0.8); /* Cambio de color al pasar el ratón */
+    background-color: #0B87BA; /* Cambio de color al pasar el ratón */
 }
 
 /* Estilo para el área de texto */
@@ -385,21 +451,78 @@ h4 {
 
 
 /*PIE DE PAGINA*/
-.footer {
-    background-color: rgb(0, 0, 0); 
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-    margin-top: auto;
+
+.footer-container {
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
-.social-links a { /*Se aplica animación para marcar que es seleccionable los enlaces a redes, no hay redes para el sitio así que no están enlazdas aún*/ 
-    color: white;
+.footer {
+    background-color: #014D69;
+    padding: 15px 0px;
+    border-top: solid 8px #F3AE5F;
+    border-bottom: solid 16px #F3AE5F;
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-links {
+    width: 25%;
+
+}
+
+.footer-links h4 {
+    font-size: 24px;
+    color: #F0F4F9;
+    margin-bottom: 20px;
+    border-bottom: solid 3px #F3AE5F;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.footer-links ul li a {
+    font-size: 16px;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    color: #F0F4F9;
+    display: block;
+    margin-bottom: 12px;
+    transition: all .3s ease;
+}
+
+.footer-links ul {
+    list-style-type: none;
+}
+
+.footer-links ul li a:hover {
+    color: #F3AE5F;
+    padding-left: 6px;
+}
+
+.social-links a {
+    display: inline-block;
+    min-height: 40px;
+    line-height: 40px;
+    background-color: none;
+    margin: 0px 12px 12px 0px;
+    text-align: center;
+    border-radius: 0%;
+    color: #F3AE5F;
+    transition: all .5s ease;
 }
 
 .social-links a:hover {
-    color: rgba(189, 144, 68, 1);
+    color: #F0F4F9;
+}
+
+@media (max-width: 900px) {
+    .footer-row {
+        text-align: center;
+    }
+    .footer-links {
+        width: 50%;
+        margin-bottom: 20px;
+    }
 }
