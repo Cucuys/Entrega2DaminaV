@@ -240,9 +240,9 @@ h4 {
     .container {
         flex-direction: column; /* Cambia la dirección del flexbox a columna */
         align-items: center; /* Centra los elementos */
-        width: 90%; /*..*/
+        min-width: 425px;
     }
-    
+
     .card-image img{
         border-radius: 20px;
         width: 300px;
@@ -330,10 +330,11 @@ h4 {
 }
 
 /* Adaptación para celulares */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     
     .history {
-        padding: 0;
+        padding: 20px 0px 20px 0px;
+        min-width: 425px;
     }
 
     .history article {
