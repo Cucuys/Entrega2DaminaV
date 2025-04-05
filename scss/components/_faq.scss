@@ -1,0 +1,16 @@
+@use '../base/variables' as *;
+
+.accordion {
+    border-top: solid 8px $highlight-color;
+    border-radius: 14px;
+    border-bottom: solid 8px $highlight-color;
+}
+
+.accordion-button {
+    background-color: $secondary-color;
+}
+
+.accordion-collapse {
+    background-color: $highlight-color;
+    color: $primary-color;
+}

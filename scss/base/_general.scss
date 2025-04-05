@@ -1,0 +1,34 @@
+@use './variables' as *;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Playfair Display', serif;
+}
+
+html, body {
+    background-color:$primary-color;
+    zoom: 0%;
+}
+
+main {
+    color: $secondary-color;
+}
+
+h1 {
+    color: $highlight-color;
+}
+
+h2 {
+    color: $secondary-color;
+}
+
+h3 {
+    font-weight: 800;
+}
+
+h4 {
+    color: $secondary-color;
+    font-weight: 800;
+}

@@ -1,0 +1,49 @@
+@use '../base/variables' as *;
+
+.history {
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    margin: auto;
+    padding: 40px 20px;
+    position: relative;
+
+        h2 {
+        font-size: 35px;
+        text-align: left;
+        margin-bottom: 20px;
+        }
+
+        h3 {
+        a {
+            color: $secondary-color;
+            transition: all 0.3s ease;
+            &:hover {
+            color: $highlight-color;
+            padding-left: 6px;
+            }
+        }
+    }
+
+    article {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: $secondary-color;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        color: $primary-color;
+        position: relative;
+        border-bottom: 3px solid $highlight-color;
+        border-top: 8px solid $highlight-color;
+
+        h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: $highlight-color;
+        }
+    }
+}
+
+

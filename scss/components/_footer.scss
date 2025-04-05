@@ -1,0 +1,69 @@
+@use '../base/variables' as *;
+
+/*PIE DE PAGINA*/
+.footer {
+    background-color: $primary-color;
+    padding: 15px 0px;
+    border-top: solid 8px $highlight-color;
+    border-bottom: solid 16px $highlight-color;
+
+    .footer-container {
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+
+    .footer-row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .footer-links {
+        width: 25%;
+
+        h4 {
+            font-size: 24px;
+            color: $secondary-color;
+            margin-bottom: 20px;
+            border-bottom: solid 3px $highlight-color;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        ul {
+            list-style-type: none;
+            li {
+                a {
+                    font-size: 16px;
+                    text-decoration: none;
+                    color: $secondary-color;
+                    display: block;
+                    margin-bottom: 12px;
+                    transition: all 0.3s ease;
+                        &:hover {
+                        color: $highlight-color;
+                        padding-left: 6px;
+                        }
+                    }
+                }
+            }
+        }
+
+    .social-links {
+        a {
+            display: inline-block;
+            min-height: 40px;
+            line-height: 40px;
+            background-color: none;
+            margin: 0px 12px 12px 0px;
+            text-align: center;
+            border-radius: 0%;
+            color: $highlight-color;
+            transition: all 0.5s ease;
+                &:hover {
+                color: $secondary-color;
+                }
+            }
+        }
+    }
+
+

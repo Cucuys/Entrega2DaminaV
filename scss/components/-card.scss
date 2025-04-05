@@ -1,0 +1,97 @@
+@use '../base/variables' as *;
+
+.title_1 {
+    margin-top: 100px;
+
+        h2 {
+        text-align: center;
+        font-size: 3rem;
+        }
+
+        p {
+        text-align: center;
+        font-size: 1.5rem;
+        }
+    }
+
+    .container {
+        border-bottom: 3px solid $highlight-color;
+        border-top: 8px solid $highlight-color;
+        border-radius: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 40px 20px;
+        background-color: $secondary-color;
+
+    .card {
+        border-color: transparent;
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        margin-bottom: 60px;
+        background-color: transparent;
+
+        .card-image {
+            img {
+            border-radius: 20px;
+            width: 400px;
+            height: 250px;
+            object-fit: cover;
+            object-position: bottom;
+            border-top: 3px solid $highlight-color;
+        }
+    }
+
+        .card-text {
+            border-radius: 20px;
+            margin: -30px auto;
+            margin-bottom: -50px;
+            height: 300px;
+            width: 300px;
+            background-color: $third-color;
+            color: $secondary-color;
+            padding: 20px;
+
+        .card-title {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            margin-top: 5px;
+            }
+
+        .card-body {
+            font-size: 1.2rem;
+            }
+        }
+
+        .read-more {
+            border-radius: 20px;
+            width: 100px;
+            height: 30px;
+            background-color: $primary-color;
+            color: $secondary-color;
+            margin-left: auto;
+            font-size: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 3px solid $highlight-color;
+            border-top: 3px solid $highlight-color;
+            transition: background-color 0.5s ease, transform 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+
+            a {
+            color: $secondary-color;
+            text-decoration: none;
+            }
+            &:hover {
+            background-color: $secondary-color;
+            transform: scale(1.15);
+            color: $primary-color;
+            border-bottom: 3px solid $highlight-color;
+            border-top: 3px solid $highlight-color;
+            }
+        }
+    }
+}
+

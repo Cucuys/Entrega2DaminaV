@@ -1,551 +1,473 @@
-/*Configuraciones generales para BODY MAIN y H1..*/
-
-/*Configuraciones generales para BODY MAIN y H1..*/
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Playfair Display', serif;
+@charset "UTF-8";
+/*Variables de colores*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Playfair Display", serif;
 }
 
 html, body {
-    background-color:#014D69;
-    zoom: 0%;
-
+  background-color: #014D69;
+  zoom: 0%;
 }
 
-
-
 main {
-    color: #F0F4F9;
+  color: #F0F4F9;
 }
 
 h1 {
-    color: #F3AE5F;
+  color: #F3AE5F;
 }
 
 h2 {
-    color: #F0F4F9;
+  color: #F0F4F9;
 }
 
 h3 {
-    font-weight: 800;
+  font-weight: 800;
 }
 
 h4 {
-    color: #F0F4F9;
-    font-weight: 800;
+  color: #F0F4F9;
+  font-weight: 800;
 }
 
-/*BIENVENIDA A LA PAGINA*/
-.welcome { /*Se centran todos los items y texto,se genera un background con un gradiente para no editar la imagen original así se puede ver con contraste el texto*/
-    position: relative;
-    width: 100%;
-    height: 40vh; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #F0F4F9;
-    padding: 20px;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), 
-                url("../img/genericas/welcomeL.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-bottom: 3px solid #F3AE5F;
-    border-top: 3px solid #F3AE5F;
-    margin-top: 20px;
-    }
-
-    .welcome_description { /*Se oculta el texto al principio*/
-        opacity: 0; 
-        transform: translateY(20px); 
-        animation: fadeInSlideUp 1s ease-in-out forwards;
-    }
-    
-    .welcome_description h1 { /*Se prueban varios tiempo de restraso, afinar antes de cargar a git*/
-        animation-delay: 0.2s;
-    }
-    
-    .welcome_description h2 {
-        animation-delay: 0.4s;
-    }
-    
-    .welcome_description p {
-        animation-delay: 0.6s;
-    }
-    
-    @keyframes fadeInSlideUp { /*Se genera una anicamción con keyframe*/
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-.welcome img { /*se configura la imagen para que quede al fondo y encaje sin deformarse en vista celular o desktop*/
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
+.title_1 {
+  margin-top: 100px;
+}
+.title_1 h2 {
+  text-align: center;
+  font-size: 3rem;
+}
+.title_1 p {
+  text-align: center;
+  font-size: 1.5rem;
 }
 
-/*NAVBAR CON BOOSTRAP EDITADA CON CSS*/
-.custom-navbar {
-    background-color: #014D69; /* Fondo */
-    padding: 1rem 0; 
-    border-bottom: 8px solid #F3AE5F;
-    border-radius: 80px;
+.container {
+  border-bottom: 3px solid #F3AE5F;
+  border-top: 8px solid #F3AE5F;
+  border-radius: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  background-color: #F0F4F9;
 }
-
-.custom-navbar .navbar-brand {
-    color: #F3AE5F; /* Color para el logo y otras partes de la web */
-    font-size: 1.5rem; 
-    font-weight: bold; 
-    margin-left: 1rem; 
+.container .card {
+  border-color: transparent;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin-bottom: 60px;
+  background-color: transparent;
 }
-
-.custom-navbar .nav-link {
-    color: #F3AE5F; /* Color de los items de barra nav */
-    position: relative; /* Para posicionar la linea debajo de cada item */
-    padding: 0.5rem 0; 
-    text-decoration: none; 
+.container .card .card-image img {
+  border-radius: 20px;
+  width: 400px;
+  height: 250px;
+  object-fit: cover;
+  object-position: bottom;
+  border-top: 3px solid #F3AE5F;
 }
-
-.custom-navbar .nav-link::after {
-    content: ''; /*Se crea un pseudo elemento para la linea animada al pasar el raton por los items del nav bar */
-    position: absolute; /* Se posiciona la linea para que siempre aparezca debajo del item*/
-    bottom: -5px; /* Recordar cambiar la distancia de la linea del item para que no se superponga */
-    left: 0; 
-    width: 100%; /*La linea cubre todo el largo del item en el nav*/
-    height: 3px; /* Recordar establecer un ancho*/
-    background-color: #F3AE5F;
-    transform: scaleX(0); /*Se esconde la linea hasta pasar el ratón*/
-    transition: transform 0.3s ease-in-out; 
+.container .card .card-text {
+  border-radius: 20px;
+  margin: -30px auto;
+  margin-bottom: -50px;
+  height: 300px;
+  width: 300px;
+  background-color: #0B87BA;
+  color: #F0F4F9;
+  padding: 20px;
 }
-
-.custom-navbar .nav-link:hover::after {
-    transform: scaleX(1); 
+.container .card .card-text .card-title {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  margin-top: 5px;
 }
-
-.custom-navbar .navbar-toggler {
-    border: none; /*Sólo se dejan las 3 linea del borde hamburguesa*/
+.container .card .card-text .card-body {
+  font-size: 1.2rem;
 }
-
-.custom-navbar .navbar-toggler-icon {
-    background-color: transparent; 
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28189, 144, 68, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); /* Cambia el icono del menú hamburguesa a un SVG con líneas doradas */
+.container .card .read-more {
+  border-radius: 20px;
+  width: 100px;
+  height: 30px;
+  background-color: #014D69;
+  color: #F0F4F9;
+  margin-left: auto;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 3px solid #F3AE5F;
+  border-top: 3px solid #F3AE5F;
+  transition: background-color 0.5s ease, transform 0.5s ease, color 0.5s ease, border-color 0.5s ease;
 }
-
-@media (max-width: 900px) {
-    .custom-navbar .navbar-nav {
-        text-align: center; /*Si bien se usa boostrap se genera este media para centrar el menu en celulares*/
-    }
+.container .card .read-more a {
+  color: #F0F4F9;
+  text-decoration: none;
 }
-
-
-/*TARJETAS, SE UTILIZARON EN VARIAS SECCIONES DEL SITIO*/
-
-.title_1{
-    margin-top: 100px;
+.container .card .read-more:hover {
+  background-color: #F0F4F9;
+  transform: scale(1.15);
+  color: #014D69;
+  border-bottom: 3px solid #F3AE5F;
+  border-top: 3px solid #F3AE5F;
 }
-
-.title_1 h2{
-    text-align: center;
-    font-size: 3rem;
-}
-
-.title_1 p{
-    text-align: center;
-    font-size: 1.5rem;
-}
-.container{
-    border-bottom: 3px solid #F3AE5F;
-    border-top: 8px solid #F3AE5F;
-    border-radius: 20px;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 40px 20px;
-    background-color: #F0F4F9;
-    
-}
-.card{
-    border-color: transparent;
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    margin-bottom: 60px;
-    background-color: transparent
-}
-
-
-.card-image img{
-    border-radius: 20px;
-    width: 400px;
-    height: 250px;
-    object-fit: cover;
-    object-position: bottom;
-    border-top: 3px solid #F3AE5F;
-}
-.card-text{
-    border-radius: 20px;
-    margin: -30px auto;
-    margin-bottom: -50px;
-    height: 300px;
-    width: 300px;
-    background-color: #0B87BA;
-    color: #F0F4F9;
-    padding: 20px;
-}
-
-.card-title{
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-    margin-top: 5px;
-}
-.card-body{
-    font-size: 1.2rem;
-}
-.read-more{
-    border-radius: 20px;
-    width: 100px;
-    height: 30px;
-    background-color:#014D69;
-    color:#F0F4F9;
-    margin-left:auto;
-    font-size: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 3px solid #F3AE5F;
-    border-top: 3px solid #F3AE5F;
-    transition: background-color 0.5s ease, transform 0.5s ease, color 0.5s ease, border-color 0.5s ease; /* Agrega suavidad a la animación tanto al poner el raton o sacarlo */
-}
-
-.read-more a {
-    color: #F0F4F9;
-    text-decoration: none;
-}
-
-.read-more:hover {
-    background-color: #F0F4F9; /* Cambio de color al pasar el ratón */
-    transform: scale(1.15); /* Escala ligeramente el botón */
-    color: #014D69;
-    border-bottom: 3px solid #F3AE5F;
-    border-top: 3px solid #F3AE5F;
-    
-}
-
-@media (max-width: 900px) {
-    .container {
-        flex-direction: column; /* Cambia la dirección del flexbox a columna */
-        align-items: center; /* Centra los elementos */
-    }
-
-    .card {width: 100%;}
-
-    .card-image img{
-        border-radius: 20px;
-        width: 100%;
-        height: 200px;
-        object-fit:cover;
-        object-position:bottom;
-        margin-left: auto;
-    }
-    .card-text{
-        border-radius: 20px;
-        margin: -70px auto;
-        margin-bottom: -50px;
-        height: 70px;
-        width: 100%;
-        background-color: #0B87BA;
-        color:#F0F4F9;
-        padding: 20px;
-    }
-    .read-more {
-        width:80px;
-        height:30px;
-        margin-right: 20px;
-    }
-    
-    .card-title{
-        font-size:1.5rem;
-        
-    }
-
-    .card-body {
-        display: none;
-    }
-}
-
-
-
-
-/*SECCION DE PILOTOS Y VUELOS HEROICOS, CONTENEDOR DEL RESUMEN DE LAS HISTORIAS*/
-.history {
-    display: flex;
-    flex-direction: column;
-    max-width: 90%;
-    margin: auto;
-    padding: 40px 20px;
-    position: relative;
-}
-
-/* Titulo principal */
-.history h2 {
-    font-size: 35px;
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-.history h3 a {
-    color: #F0F4F9;
-    transition: all .3s ease;
-}
-
-.history h3 a:hover {
-    color: #F3AE5F;
-    padding-left: 6px;
-}
-
-
-/* Estilo de articulos*/
-.history article {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #F0F4F9; 
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    color: #014D69;
-    position: relative;
-    border-bottom: 3px solid #F3AE5F;
-    border-top: 8px solid #F3AE5F;
-}
-
-.history article h4 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #D38F5E ;
-}
-
-/* Adaptación para celulares */
-@media (max-width: 900px) {
-    
-    .history {
-        padding: 40px 5px 20px 5px;
-        min-width: 100%;
-    }
-
-    .history article {
-        flex-direction: column;
-        text-align: center;
-        padding: 10px;
-    }
-
-    .history article div {
-        width: 100%;
-    }
-
-}
-
-/*GALERIA DE IMAGENES PARA LAS PAGE DE HISTORIAS*/
-.galleryhistory {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-    padding: 20px;
-}
-
-.gallery-item {
-    position: relative;
-    overflow: hidden; /* Evita que las imágenes se desborden */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
-}
-
-.gallery-item:hover {
-    transform: scale(1.03);
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ajusta la imagen para llenar el contenedor */
-    display: block; /* Elimina el espacio adicional debajo de la imagen */
-}
-
-/*ESTILO PREGUNTAS FRECUENTES*/
 
 .accordion {
-    border-top: solid 8px #F3AE5F;
-    border-radius: 14px;
-    border-bottom: solid 8px #F3AE5F;
+  border-top: solid 8px #F3AE5F;
+  border-radius: 14px;
+  border-bottom: solid 8px #F3AE5F;
 }
 
 .accordion-button {
-    background-color: #F0F4F9;
+  background-color: #F0F4F9;
 }
 
 .accordion-collapse {
-    background-color: #F3AE5F;
-    color: #014D69;
+  background-color: #F3AE5F;
+  color: #014D69;
 }
-
-/*ESTILO PARA EL FOMULARIO DE CONTACTO*/
-.contact {
-    text-align: center;
-    margin: 20px 5px 20px 5px;
-}
-
-.form-contact {
-    display: flex;
-    flex-direction: column;
-    gap: 15px; 
-    background-color:#F0F4F9;
-    padding: 20px;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 500px; 
-    margin: 0 auto; 
-    border-top: solid 10px #F3AE5F;
-}
-
-/*Estilo para los labels*/
-.form-contact label {
-    font-size: 14px;
-    color: #014D69;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-/*Estilo para los inputs y textarea*/
-.form-contact input,
-.form-contact textarea {
-    padding: 10px;
-    font-size: 16px;
-    border: 2px solid #F3AE5F;
-    border-radius: 4px;
-    outline: none;
-    transition: border-color 0.3s ease;
-    color: #014D69;
-    border-top: solid 3px #F3AE5F;
-    border-radius: 10px;
-}
-
-.form-contact input:focus,
-.form-contact textarea:focus {
-    border-color: #F3AE5F; /*Se cambia el color cuando esté el ratón encima*/
-}
-
-/* Estilo para el botón */
-.form-contact button {
-    background-color: #F3AE5F;
-    color: #F0F4F9;
-    font-size: 16px;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.form-contact button:hover {
-    background-color: #0B87BA; /* Cambio de color al pasar el ratón */
-}
-
-/* Estilo para el área de texto */
-.form-contact textarea {
-    resize: vertical; /* Acordar, permite redimensionar solo verticalmente*/
-    min-height: 100px;
-}
-
-
 
 /*PIE DE PAGINA*/
-
-.footer-container {
-    max-width: 1300px;
-    margin: 0 auto;
-}
-
 .footer {
-    background-color: #014D69;
-    padding: 15px 0px;
-    border-top: solid 8px #F3AE5F;
-    border-bottom: solid 16px #F3AE5F;
+  background-color: #014D69;
+  padding: 15px 0px;
+  border-top: solid 8px #F3AE5F;
+  border-bottom: solid 16px #F3AE5F;
+}
+.footer .footer-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.footer .footer-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer .footer-links {
+  width: 25%;
+}
+.footer .footer-links h4 {
+  font-size: 24px;
+  color: #F0F4F9;
+  margin-bottom: 20px;
+  border-bottom: solid 3px #F3AE5F;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+.footer .footer-links ul {
+  list-style-type: none;
+}
+.footer .footer-links ul li a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #F0F4F9;
+  display: block;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+.footer .footer-links ul li a:hover {
+  color: #F3AE5F;
+  padding-left: 6px;
+}
+.footer .social-links a {
+  display: inline-block;
+  min-height: 40px;
+  line-height: 40px;
+  background-color: none;
+  margin: 0px 12px 12px 0px;
+  text-align: center;
+  border-radius: 0%;
+  color: #F3AE5F;
+  transition: all 0.5s ease;
+}
+.footer .social-links a:hover {
+  color: #F0F4F9;
 }
 
-.footer-row {
-    display: flex;
-    flex-wrap: wrap;
+.contact {
+  text-align: center;
+  margin: 20px 5px;
+}
+.contact .form-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #F0F4F9;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  border-top: solid 10px #F3AE5F;
+}
+.contact .form-contact label {
+  font-size: 14px;
+  color: #014D69;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.contact .form-contact input,
+.contact .form-contact textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #F3AE5F;
+  border-top: solid 3px #F3AE5F;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  color: #014D69;
+}
+.contact .form-contact input:focus,
+.contact .form-contact textarea:focus {
+  border-color: #F3AE5F;
+}
+.contact .form-contact textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.contact .form-contact button {
+  background-color: #F3AE5F;
+  color: #F0F4F9;
+  font-size: 16px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+.contact .form-contact button:hover {
+  background-color: #0B87BA;
 }
 
-.footer-links {
-    width: 25%;
-
+.galleryhistory {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+.galleryhistory .gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+.galleryhistory .gallery-item:hover {
+  transform: scale(1.03);
+}
+.galleryhistory .gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-.footer-links h4 {
-    font-size: 24px;
-    color: #F0F4F9;
-    margin-bottom: 20px;
-    border-bottom: solid 3px #F3AE5F;
-    padding-bottom: 10px;
-    display: inline-block;
+.history {
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+  margin: auto;
+  padding: 40px 20px;
+  position: relative;
+}
+.history h2 {
+  font-size: 35px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.history h3 a {
+  color: #F0F4F9;
+  transition: all 0.3s ease;
+}
+.history h3 a:hover {
+  color: #F3AE5F;
+  padding-left: 6px;
+}
+.history article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F0F4F9;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  color: #014D69;
+  position: relative;
+  border-bottom: 3px solid #F3AE5F;
+  border-top: 8px solid #F3AE5F;
+}
+.history article h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #F3AE5F;
 }
 
-.footer-links ul li a {
-    font-size: 16px;
-    text-decoration: none;
-    color: #F0F4F9;
-    display: block;
-    margin-bottom: 12px;
-    transition: all .3s ease;
+/* NAVBAR CON BOOSTRAP EDITADA CON SCSS */
+.custom-navbar {
+  background-color: #014D69; /* Fondo */
+  padding: 1rem 0;
+  border-bottom: 8px solid #F3AE5F;
+  border-radius: 80px;
+}
+.custom-navbar .navbar-brand {
+  color: #F3AE5F; /* Color para el logo y otras partes de la web */
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 1rem;
+}
+.custom-navbar .nav-link {
+  color: #F3AE5F; /* Color de los items de barra nav */
+  position: relative; /* Para posicionar la linea debajo de cada item */
+  padding: 0.5rem 0;
+  text-decoration: none;
+}
+.custom-navbar .nav-link::after {
+  content: ""; /* Pseudo elemento para la línea animada */
+  position: absolute;
+  bottom: -5px; /* Espacio entre texto y línea */
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #F3AE5F;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+.custom-navbar .nav-link:hover::after {
+  transform: scaleX(1);
+}
+.custom-navbar .navbar-toggler {
+  border: none; /* Elimina borde del botón hamburguesa */
+}
+.custom-navbar .navbar-toggler .navbar-toggler-icon {
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28189, 144, 68, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-.footer-links ul {
-    list-style-type: none;
+.wellcome {
+  /* Contenedor principal */
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #F0F4F9;
+  padding: 20px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url("../img/genericas/welcomeL.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: 3px solid #F3AE5F;
+  border-top: 3px solid #F3AE5F;
+  margin-top: 20px;
+}
+.wellcome img {
+  /* Imagen de fondo */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.wellcome .wellcome_description {
+  /* Contenedor del texto */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInSlideUp 1s ease-in-out forwards;
+}
+.wellcome .wellcome_description h1 {
+  animation-delay: 0.2s;
+}
+.wellcome .wellcome_description h2 {
+  animation-delay: 0.4s;
+}
+.wellcome .wellcome_description p {
+  animation-delay: 0.6s;
+}
+@keyframes fadeInSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.footer-links ul li a:hover {
-    color: #F3AE5F;
-    padding-left: 6px;
-}
-
-.social-links a {
-    display: inline-block;
-    min-height: 40px;
-    line-height: 40px;
-    background-color: none;
-    margin: 0px 12px 12px 0px;
-    text-align: center;
-    border-radius: 0%;
-    color: #F3AE5F;
-    transition: all .5s ease;
-}
-
-.social-links a:hover {
-    color: #F0F4F9;
-}
-
+/*Footer mediaQ*/
 @media (max-width: 900px) {
-    .footer-row {
-        text-align: center;
-    }
-    .footer-links {
-        width: 50%;
-        margin-bottom: 20px;
-    }
-    .footer {
-        width: 100%;
-    }
-
-
+  .footer-row {
+    text-align: center;
+  }
+  .footer {
+    width: 100%;
+  }
+  .footer .footer-links {
+    width: 50%;
+    margin-bottom: 20px;
+  }
 }
+/* History mediaQ */
+@media (max-width: 900px) {
+  .history {
+    padding: 40px 5px 20px 5px;
+    min-width: 100%;
+  }
+  .history article {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+  .history article div {
+    width: 100%;
+  }
+}
+/*NAVBAR mediaQ*/
+@media (max-width: 900px) {
+  .custom-navbar .navbar-nav {
+    text-align: center; /*Si bien se usa boostrap se genera este media para centrar el menu en celulares*/
+  }
+}
+/*CARD MEDIAQ*/
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container .card {
+    width: 100%;
+  }
+  .container .card .card-image img {
+    border-radius: 20px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: bottom;
+    margin-left: auto;
+  }
+  .container .card .card-text {
+    border-radius: 20px;
+    margin: -70px auto;
+    margin-bottom: -50px;
+    height: 70px;
+    width: 100%;
+    background-color: #0B87BA;
+    color: #F0F4F9;
+    padding: 20px;
+  }
+  .container .card .card-text .card-title {
+    font-size: 1.5rem;
+  }
+  .container .card .card-text .card-body {
+    display: none;
+  }
+  .container .card .read-more {
+    width: 80px;
+    height: 30px;
+    margin-right: 20px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

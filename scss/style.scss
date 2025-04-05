@@ -1,1 +1,10 @@
-asdasd
+@use 'base/general';
+@use 'components/-card.scss';
+@use 'components/faq';
+@use 'components/footer';
+@use 'components/form-contact';
+@use 'components/gallery';
+@use 'components/history';
+@use 'components/navbar';
+@use 'components/wellcome';
+@use 'base/mediaq';
