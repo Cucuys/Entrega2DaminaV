@@ -64,34 +64,34 @@
             font-size: 1.2rem;
             }
         }
-
-        .read-more {
-            border-radius: 20px;
-            width: 100px;
-            height: 30px;
-            background-color: $primary-color;
-            color: $secondary-color;
-            margin-left: auto;
-            font-size: 1rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-bottom: 3px solid $highlight-color;
-            border-top: 3px solid $highlight-color;
-            transition: background-color 0.5s ease, transform 0.5s ease, color 0.5s ease, border-color 0.5s ease;
-
-            a {
-            color: $secondary-color;
-            text-decoration: none;
-            }
-            &:hover {
-            background-color: $secondary-color;
-            transform: scale(1.15);
-            color: $primary-color;
-            border-bottom: 3px solid $highlight-color;
-            border-top: 3px solid $highlight-color;
-            }
-        }
     }
 }
+
+.read-more {
+    border-radius: 20px;
+    width: 100px;
+    height: 30px;
+    background-color: $primary-color;
+    color: $secondary-color;
+    margin-left: auto;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid $highlight-color;
+    border-top: 3px solid $highlight-color;
+    transition: background-color 0.5s ease, transform 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+
+    a {
+    color: $secondary-color;
+    text-decoration: none;
+    }
+    &:hover {
+    background-color: $highlight-color;
+    transform: scale(1.15);
+    border-bottom: 3px solid $highlight-color;
+    border-top: 3px solid $highlight-color;
+    }
+}
+
 
