@@ -1,0 +1,7 @@
+@use '../base/variables' as *;
+
+@mixin contenedor-estilado($bg-color) {
+    background-color: $bg-color;
+    border-radius: $border-radius; 
+    padding: 15px; 
+}

@@ -1,11 +1,14 @@
+@use 'sass:map';
+@use '../utilities/maps' as *;
 @use '../base/variables' as *;
+@use '../utilities/extend' as *;
 
 /*PIE DE PAGINA*/
 .footer {
-    background-color: $primary-color;
+    background-color: map.get($colors, primary);
     padding: 15px 0px;
-    border-top: solid 8px $highlight-color;
-    border-bottom: solid 16px $highlight-color;
+    border-top: solid 8px map.get($colors, highlight);
+    border-bottom: solid 16px map.get($colors, highlight);
 
     .footer-container {
         max-width: 1300px;
@@ -18,14 +21,14 @@
         text-align: center;
     }
 
-    .footer-links {
+    .footer-links  {
         width: 25%;
-
+    
         h4 {
             font-size: 24px;
-            color: $secondary-color;
+            color: map.get($colors, secondary);
             margin-bottom: 20px;
-            border-bottom: solid 3px $highlight-color;
+            border-bottom: solid 3px map.get($colors, highlight);
             padding-bottom: 10px;
             display: inline-block;
         }
@@ -34,14 +37,12 @@
             list-style-type: none;
             li {
                 a {
+                    @extend %footer-link-base;
                     font-size: 16px;
-                    text-decoration: none;
-                    color: $secondary-color;
                     display: block;
                     margin-bottom: 12px;
-                    transition: all 0.3s ease;
-                        &:hover {
-                        color: $highlight-color;
+                    transition: padding-left 0.3s ease;
+                    &:hover {
                         padding-left: 6px;
                         }
                     }
@@ -51,18 +52,12 @@
 
     .social-links {
         a {
+            @extend %footer-link-base;
             display: inline-block;
             min-height: 40px;
             line-height: 40px;
-            background-color: none;
             margin: 0px 12px 12px 0px;
             text-align: center;
-            border-radius: 0%;
-            color: $highlight-color;
-            transition: all 0.5s ease;
-                &:hover {
-                color: $secondary-color;
-                }
             }
         }
     }

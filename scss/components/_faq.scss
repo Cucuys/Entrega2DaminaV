@@ -1,16 +1,19 @@
+@use 'sass:map';
+@use '../utilities/maps' as *;
 @use '../base/variables' as *;
 
 .accordion {
-    border-top: solid 8px $highlight-color;
+    border-top: solid 8px map.get($colors, highlight);
     border-radius: 14px;
-    border-bottom: solid 8px $highlight-color;
+    border-bottom: solid 8px map.get($colors, secondary);
 }
 
 .accordion-button {
-    background-color: $secondary-color;
+    background-color: map.get($colors, secondary);
 }
 
 .accordion-collapse {
-    background-color: $highlight-color;
-    color: $primary-color;
+    background-color: map.get($colors, highlight);
+    color: map.get($colors, primary);
 }
+

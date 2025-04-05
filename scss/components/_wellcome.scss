@@ -1,7 +1,8 @@
+@use 'sass:map';
+@use '../utilities/maps' as *;
 @use '../base/variables' as *;
 
 .wellcome {
-    /* Contenedor principal */
     position: relative;
     width: 100%;
     height: 40vh;
@@ -10,15 +11,15 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: $secondary-color;
+    color: map.get($colors, secondary);
     padding: 20px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
                 url("../img/genericas/welcomeL.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-bottom: 3px solid $highlight-color;
-    border-top: 3px solid $highlight-color;
+    border-bottom: 3px solid map.get($colors, highlight);
+    border-top: 3px solid map.get($colors, highlight);
     margin-top: 20px;
 
     img {

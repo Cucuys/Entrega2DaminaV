@@ -1,3 +1,5 @@
+@use 'sass:map';
+@use '../utilities/maps' as *;
 @use '../base/variables' as *;
 
 .history {
@@ -16,10 +18,10 @@
 
         h3 {
         a {
-            color: $secondary-color;
+            color: map.get($colors, secondary);
             transition: all 0.3s ease;
             &:hover {
-            color: $highlight-color;
+            color: map.get($colors, highlight);
             padding-left: 6px;
             }
         }
@@ -29,19 +31,19 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background: $secondary-color;
+        background: map.get($colors, secondary);
         padding: 20px;
         margin-bottom: 20px;
         border-radius: 8px;
-        color: $primary-color;
+        color: map.get($colors, primary);
         position: relative;
-        border-bottom: 3px solid $highlight-color;
-        border-top: 8px solid $highlight-color;
+        border-bottom: 3px solid map.get($colors, highlight);
+        border-top: 8px solid map.get($colors, highlight);
 
         h4 {
             font-size: 20px;
             margin-bottom: 10px;
-            color: $highlight-color;
+            color: map.get($colors, highlight);
         }
     }
 }

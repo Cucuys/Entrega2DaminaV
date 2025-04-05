@@ -1,6 +1,5 @@
-/*Variables de colores*/
-$primary-color: #014D69;
-$secondary-color: #F0F4F9;
-$third-color: #0B87BA;
-$highlight-color: #F3AE5F;
+/*Fuentes*/
 $font-family: 'Playfair Display', serif;
+$sans-serif-italic: sans-serif italic;
+/*Se deja la variable border radius para respetar consiga, utilizar en el mixin y dar uso a variables, map etc*/
+$border-radius: 8px;

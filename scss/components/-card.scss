@@ -1,3 +1,5 @@
+@use 'sass:map';
+@use '../utilities/maps' as *;
 @use '../base/variables' as *;
 
 .title_1 {
@@ -5,25 +7,25 @@
 
         h2 {
         text-align: center;
-        font-size: 3rem;
+        font-size: map.get($font-sizes, h1);
         }
 
         p {
         text-align: center;
-        font-size: 1.5rem;
+        font-size: map.get($font-sizes, h3);
         }
     }
 
     .container {
-        border-bottom: 3px solid $highlight-color;
-        border-top: 8px solid $highlight-color;
+        border-bottom: 3px solid map.get($colors, highlight);
+        border-top: 8px solid map.get($colors, highlight);
         border-radius: 20px;
         width: 100%;
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
         padding: 40px 20px;
-        background-color: $secondary-color;
+        background-color: map.get($colors, secondary);
 
     .card {
         border-color: transparent;
@@ -40,7 +42,7 @@
             height: 250px;
             object-fit: cover;
             object-position: bottom;
-            border-top: 3px solid $highlight-color;
+            border-top: 3px solid map.get($colors, highlight);
         }
     }
 
@@ -50,12 +52,12 @@
             margin-bottom: -50px;
             height: 300px;
             width: 300px;
-            background-color: $third-color;
-            color: $secondary-color;
+            background-color: map.get($colors, third);
+            color: map.get($colors, secondary);
             padding: 20px;
 
         .card-title {
-            font-size: 2.2rem;
+            font-size: map.get($font-sizes, h2);
             margin-bottom: 20px;
             margin-top: 5px;
             }
@@ -71,26 +73,26 @@
     border-radius: 20px;
     width: 100px;
     height: 30px;
-    background-color: $primary-color;
-    color: $secondary-color;
+    background-color: map.get($colors, primary);
+    color: map.get($colors, secondary);
     margin-left: auto;
     font-size: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 3px solid $highlight-color;
-    border-top: 3px solid $highlight-color;
+    border-bottom: 3px solid map.get($colors, highlight);
+    border-top: 3px solid map.get($colors, highlight);
     transition: background-color 0.5s ease, transform 0.5s ease, color 0.5s ease, border-color 0.5s ease;
 
     a {
-    color: $secondary-color;
+    color: map.get($colors, secondary);
     text-decoration: none;
     }
     &:hover {
-    background-color: $highlight-color;
+    background-color: map.get($colors, highlight);
     transform: scale(1.15);
-    border-bottom: 3px solid $highlight-color;
-    border-top: 3px solid $highlight-color;
+    border-bottom: 3px solid map.get($colors, highlight);
+    border-top: 3px solid map.get($colors, highlight);
     }
 }
 

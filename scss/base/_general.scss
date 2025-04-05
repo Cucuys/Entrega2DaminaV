@@ -1,3 +1,5 @@
+@use 'sass:map';
+@use '../utilities/maps' as *;
 @use './variables' as *;
 
 *{
@@ -8,27 +10,36 @@
 }
 
 html, body {
-    background-color:$primary-color;
+    background-color: map.get($colors, primary);
     zoom: 0%;
 }
 
 main {
-    color: $secondary-color;
+    color: map.get($colors, secondary);
 }
 
 h1 {
-    color: $highlight-color;
+    color: map.get($colors, highlight);
+    font-size: map.get($font-sizes, h1);
+    font-family:$sans-serif-italic;
 }
 
 h2 {
-    color: $secondary-color;
+    color: map.get($colors, secondary);
+    font-size: map.get($font-sizes, h2);
+    font-family:$sans-serif-italic;
+
 }
 
 h3 {
-    font-weight: 800;
+    font-size: map.get($font-sizes, h3);
 }
 
 h4 {
-    color: $secondary-color;
-    font-weight: 800;
+    color: map.get($colors, secondary);
+    font-size: map.get($font-sizes, h4);
+}
+
+p {
+    font-size: map.get($font-sizes, p);
 }
