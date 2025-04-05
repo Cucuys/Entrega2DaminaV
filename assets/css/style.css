@@ -335,7 +335,7 @@ p {
   text-decoration: none;
 }
 .custom-navbar .nav-link::after {
-  content: ""; /* Pseudo elemento para la línea animada */
+  content: ""; /* Pseudo elemento para la linea animada */
   position: absolute;
   bottom: -5px; /* Espacio entre texto y línea */
   left: 0;
@@ -467,7 +467,7 @@ p {
     padding: 20px;
   }
   .container .card .card-text .card-title {
-    font-size: 1.7em;
+    font-size: 1.4em;
   }
   .container .card .card-text .card-body {
     display: none;
@@ -476,6 +476,14 @@ p {
     width: 80px;
     height: 30px;
     margin-right: 20px;
+  }
+}
+@media (max-width: 900px) {
+  .wellcome_description h1 {
+    font-size: 2.1em;
+  }
+  .wellcome_description h2 {
+    font-size: 1.4em;
   }
 }
 

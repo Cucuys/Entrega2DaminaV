@@ -77,7 +77,7 @@
                 padding: 20px;
 
             .card-title {
-                font-size: map.get($font-sizes, h3);
+                font-size: map.get($font-sizes, h4);
             }
 
             .card-body {
@@ -94,3 +94,13 @@
     }
 }
 
+@media (max-width: 900px) {
+    .wellcome_description {
+        h1{
+            font-size: map.get($font-sizes, h2);
+        }
+        h2{
+            font-size: map.get($font-sizes, h4);
+        }
+    }
+}
