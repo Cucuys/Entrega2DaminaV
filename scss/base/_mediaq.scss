@@ -12,14 +12,14 @@
     .footer {
         width: 100%;
         
-        .footer-links {
+        .footer-links { /*EN PANTALLAS PEQUEÑAS SE DIVIDE 50% PARA QUE QUEDEN DOS BLOQUES ARRIBA Y DOS ABAJO, NO LOS 4 EN LINEAS COMO EN VISTA DESKTOP*/
             width: 50%;
             margin-bottom: 20px;
         }
     }
 }
 
-/* History mediaQ */
+/* HISTORY MEDIAQ */
 @media (max-width: 900px) {
     .history {
         padding: 40px 15px 20px 15px;
@@ -39,10 +39,10 @@
 }
 
 
-/*NAVBAR mediaQ*/
+/*NAVBAR MEDIAQ*/
 @media (max-width: 900px) {
     .custom-navbar .navbar-nav {
-        text-align: center; /*Si bien se usa boostrap se genera este media para centrar el menu en celulares*/
+        text-align: center; /*SI BIEN SE USA BOOSTRAP SE GENERA ESTA MEDIAQ PARA CENTRAR EL TEXTO EN PANTALLAS PEQUEÑAS*/
     }
 }
 

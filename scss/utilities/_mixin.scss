@@ -1,5 +1,5 @@
 @use '../base/variables' as *;
-
+/*SE GENERA UN MIXIN PARA APLICAR BORDES A CIERTAS ESTRUCTURAS DE LA WEB, SE UTILIZA LA VARIBLE BORDER RADIUS DECLARADA EN VARIABLES*/
 @mixin contenedor-estilado($bg-color) {
     background-color: $bg-color;
     border-radius: $border-radius; 

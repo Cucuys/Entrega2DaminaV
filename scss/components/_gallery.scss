@@ -1,5 +1,6 @@
 @use '../base/variables' as *;
 
+/*SE GENERA ANIDAMIENTO, EL ESTILO Y UNA PEQUEÑA ANIMACIÓN PARA LOS ITEMS DE LA CLASE*/
 .galleryhistory {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

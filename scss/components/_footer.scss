@@ -3,7 +3,7 @@
 @use '../base/variables' as *;
 @use '../utilities/extend' as *;
 
-/*PIE DE PAGINA*/
+/*PIE DE PAGINA, SE LLAMA A VARIABLES MAPS Y EXTEND PARA*/
 .footer {
     background-color: map.get($colors, primary);
     padding: 15px 0px;
@@ -37,7 +37,7 @@
             list-style-type: none;
             li {
                 a {
-                    @extend %footer-link-base;
+                    @extend %footer-link-base; /*SE UTILIZA EL EXTEND PARA NO DUPLICAR CODIGO Y SE LE AGREGAN LAS MODIFICACIONES CORRESPONDIENTE*/
                     font-size: 16px;
                     display: block;
                     margin-bottom: 12px;
@@ -52,7 +52,7 @@
 
     .social-links {
         a {
-            @extend %footer-link-base;
+            @extend %footer-link-base; /*SE UTILIZA EL EXTEND NUEVAMENTE PARA NO DUPLICAR CÓDIGO, SE LE AGREGAN LAS MODIFICACIONES CORRESPONDIENTE DEBAJO*/
             display: inline-block;
             min-height: 40px;
             line-height: 40px;

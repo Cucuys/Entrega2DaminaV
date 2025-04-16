@@ -2,6 +2,8 @@
 @use '../utilities/maps' as *;
 @use '../base/variables' as *;
 
+/*CLASE UTILIZADA PARA LOS ARTICULOS E HISTORIAS MÁS EXTENSAS PRESENTADAS EN LA WEB*/
+
 .history {
     display: flex;
     flex-direction: column;

@@ -1,6 +1,8 @@
 @charset "UTF-8";
-/*Fuentes*/
-/*Se deja la variable border radius para respetar consiga, utilizar en el mixin y dar uso a variables, map etc*/
+/*SE TRAEN LOS MAPS Y VARIABLES UTILIZADAS EN LOS ASPECTOS GENERALES DE LA WEB*/
+/*MAP GENERADO PARA TAMAÑOS DE FUENTES RELATIVAS PARA UNA MEJOR ADAPTABILIDAD A LAS PANTALLAS Y LOS COLORES BASES DEL SITIO WEB*/
+/*FUENTES*/
+/*SE DEJA LA VARIABLE BORDER RADIUS PARA RESPETAR LA CONSIGNA Y QUE HAYA VARIABLES EN EL PROYECTO, UTILIZARLA EN ELMIXIN Y MAPS, ETC*/
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +19,7 @@ main {
   color: #F0F4F9;
 }
 
-h1 {
+h1, .wellcome .wellcome_description h2 {
   color: #F3AE5F;
   font-size: 2.6em;
   font-family: sans-serif italic;
@@ -42,7 +44,7 @@ p {
   font-size: 1.2em;
 }
 
-.title_1 {
+.title_1 { /*SE GENERAN CLASES PARA TITULOS Y LAS TARJETAS APLICANDO ANIMACIONES, VARIABLES Y MAPS*/
   margin-top: 100px;
 }
 .title_1 h2 {
@@ -126,6 +128,7 @@ p {
   border-top: 3px solid #F3AE5F;
 }
 
+/*SE UTILIZAN MAPS PARA EL COLOR*/
 .accordion {
   border-top: solid 8px #F3AE5F;
   border-radius: 14px;
@@ -141,7 +144,7 @@ p {
   color: #014D69;
 }
 
-.footer .footer-links ul li a, .footer .social-links a {
+.footer .footer-links ul li a, .footer .social-links a { /*SE GENERA UN EXTEND PARA UTILIZAR EN DOS SECCIONES DISTINTAS DEL FOOTER*/
   text-decoration: none;
   background-color: none;
   color: #F0F4F9;
@@ -151,7 +154,7 @@ p {
   color: #F3AE5F;
 }
 
-/*PIE DE PAGINA*/
+/*PIE DE PAGINA, SE LLAMA A VARIABLES MAPS Y EXTEND PARA*/
 .footer {
   background-color: #014D69;
   padding: 15px 0px;
@@ -182,6 +185,7 @@ p {
   list-style-type: none;
 }
 .footer .footer-links ul li a {
+  /*SE UTILIZA EL EXTEND PARA NO DUPLICAR CODIGO Y SE LE AGREGAN LAS MODIFICACIONES CORRESPONDIENTE*/
   font-size: 16px;
   display: block;
   margin-bottom: 12px;
@@ -191,6 +195,7 @@ p {
   padding-left: 6px;
 }
 .footer .social-links a {
+  /*SE UTILIZA EL EXTEND NUEVAMENTE PARA NO DUPLICAR CÓDIGO, SE LE AGREGAN LAS MODIFICACIONES CORRESPONDIENTE DEBAJO*/
   display: inline-block;
   min-height: 40px;
   line-height: 40px;
@@ -198,6 +203,7 @@ p {
   text-align: center;
 }
 
+/*SE GENERA UN MIXIN PARA APLICAR BORDES A CIERTAS ESTRUCTURAS DE LA WEB, SE UTILIZA LA VARIBLE BORDER RADIUS DECLARADA EN VARIABLES*/
 .contact {
   text-align: center;
   margin: 20px 5px;
@@ -252,6 +258,7 @@ p {
   background-color: #0B87BA;
 }
 
+/*SE GENERA ANIDAMIENTO, EL ESTILO Y UNA PEQUEÑA ANIMACIÓN PARA LOS ITEMS DE LA CLASE*/
 .galleryhistory {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -275,6 +282,7 @@ p {
   display: block;
 }
 
+/*CLASE UTILIZADA PARA LOS ARTICULOS E HISTORIAS MÁS EXTENSAS PRESENTADAS EN LA WEB*/
 .history {
   display: flex;
   flex-direction: column;
@@ -323,21 +331,21 @@ p {
   border-radius: 80px;
 }
 .custom-navbar .navbar-brand {
-  color: #F3AE5F; /* Color para el logo y otras partes de la web */
+  color: #F3AE5F; /*SE GENERA EL COLOR CON EL MAPS PARA EL LOGO Y OTRAS PARTES DE LA WEB */
   font-size: 1.5rem;
   font-weight: bold;
   margin-left: 1rem;
 }
 .custom-navbar .nav-link {
-  color: #F3AE5F; /* Color de los items de barra nav */
-  position: relative; /* Para posicionar la linea debajo de cada item */
-  padding: 0.5rem 0;
+  color: #F3AE5F; /* COLOR DE CADA ITEM EN LA BARRA NAV*/
+  position: relative; /* SE POSICIONA LA LINEA DE CADA ITEM PARA LA POSICION */
+  padding: 0.5rem 0; /*SE UTILIZAN MEDIDAS RELATIVAS YA QUE CON PX GENERABA PROBLEMAS AL CAMBIAR DE TAMAÑO*/
   text-decoration: none;
 }
 .custom-navbar .nav-link::after {
-  content: ""; /* Pseudo elemento para la linea animada */
+  content: ""; /* SE GENERÓ EL PSEUDO ELEMENTO PARA APLICARLO EN LA WEB Y GENERAL LA LINEA ANIMADA DEBAJAO DEL ITEM */
   position: absolute;
-  bottom: -5px; /* Espacio entre texto y línea */
+  bottom: -5px; /* SE GENERA EL ESPACIO ENTRE EL TEXTO DEL ITEM Y LA LINEA */
   left: 0;
   width: 100%;
   height: 3px;
@@ -349,17 +357,17 @@ p {
   transform: scaleX(1);
 }
 .custom-navbar .navbar-toggler {
-  border: none; /* Elimina borde del botón hamburguesa */
+  border: none; /* SE ELIMINA EL BORDE DEL BOTÓN HAMBURGUESA */
 }
 .custom-navbar .navbar-toggler .navbar-toggler-icon {
-  background-color: transparent;
+  background-color: transparent; /*SE USA LA URL DEL ARCHIVO DE BOOSTRAP PARA CAMBIARLE EL CÓLOR*/
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28189, 144, 68, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-.wellcome {
+.wellcome { /*SE GENERA LA CLASE PARA LA IMAGEN Y LA SECCIÓN DE BIENVENIDA, NO SE REUTILIZAN CLASES, SÓLO SE UTILIZARÁ EN LA BIENVENIDA DE MOMENTO*/
   position: relative;
   width: 100%;
-  height: 40vh;
+  height: 40vh; /*SE USA UNA MEDIDA RELATIVA YA QUE GENERABAN PROBLEMAS CON MEDIDAS FIJAS COMO PX*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -376,7 +384,7 @@ p {
   margin-top: 20px;
 }
 .wellcome img {
-  /* Imagen de fondo */
+  /* IMAGEN DE FONNOD */
   position: absolute;
   width: 100%;
   height: 100%;
@@ -384,15 +392,16 @@ p {
   z-index: -1;
 }
 .wellcome .wellcome_description {
-  /* Contenedor del texto */
+  /*CONTENEDOR DEL TEXTO DE BIENVENIDA Y ANIMACIÓN */
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInSlideUp 1s ease-in-out forwards;
 }
-.wellcome .wellcome_description h1 {
+.wellcome .wellcome_description h1, .wellcome .wellcome_description h2 {
   animation-delay: 0.2s;
 }
 .wellcome .wellcome_description h2 {
+  /*SE USA EXTEND PARA DARLE AL H2 DE BIENVENIDA EL MISMO ESTILO QUE EL H1 QUE CONTIENE EL HEADER EN LA BARRA DE NAVEGACIÓN*/
   animation-delay: 0.4s;
 }
 .wellcome .wellcome_description p {
@@ -413,12 +422,12 @@ p {
   .footer {
     width: 100%;
   }
-  .footer .footer-links {
+  .footer .footer-links { /*EN PANTALLAS PEQUEÑAS SE DIVIDE 50% PARA QUE QUEDEN DOS BLOQUES ARRIBA Y DOS ABAJO, NO LOS 4 EN LINEAS COMO EN VISTA DESKTOP*/
     width: 50%;
     margin-bottom: 20px;
   }
 }
-/* History mediaQ */
+/* HISTORY MEDIAQ */
 @media (max-width: 900px) {
   .history {
     padding: 40px 15px 20px 15px;
@@ -433,10 +442,10 @@ p {
     width: 100%;
   }
 }
-/*NAVBAR mediaQ*/
+/*NAVBAR MEDIAQ*/
 @media (max-width: 900px) {
   .custom-navbar .navbar-nav {
-    text-align: center; /*Si bien se usa boostrap se genera este media para centrar el menu en celulares*/
+    text-align: center; /*SI BIEN SE USA BOOSTRAP SE GENERA ESTA MEDIAQ PARA CENTRAR EL TEXTO EN PANTALLAS PEQUEÑAS*/
   }
 }
 /*CARD MEDIAQ*/

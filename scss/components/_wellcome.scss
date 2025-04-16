@@ -1,11 +1,12 @@
 @use 'sass:map';
 @use '../utilities/maps' as *;
 @use '../base/variables' as *;
+@use '../base/general' as*;
 
-.wellcome {
+.wellcome { /*SE GENERA LA CLASE PARA LA IMAGEN Y LA SECCIÓN DE BIENVENIDA, NO SE REUTILIZAN CLASES, SÓLO SE UTILIZARÁ EN LA BIENVENIDA DE MOMENTO*/
     position: relative;
     width: 100%;
-    height: 40vh;
+    height: 40vh; /*SE USA UNA MEDIDA RELATIVA YA QUE GENERABAN PROBLEMAS CON MEDIDAS FIJAS COMO PX*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,7 +14,7 @@
     text-align: center;
     color: map.get($colors, secondary);
     padding: 20px;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), /*SE UTILIZA UN GRADIENTE PARA OSCURECER LA IMAGEN Y SEA MÁS LEGIBLE EL TEXTO EN LA PARTE BAJA*/
                 url("../img/genericas/welcomeL.jpg");
     background-size: cover;
     background-position: center;
@@ -23,7 +24,7 @@
     margin-top: 20px;
 
     img {
-        /* Imagen de fondo */
+        /* IMAGEN DE FONNOD */
         position: absolute;
         width: 100%;
         height: 100%;
@@ -32,7 +33,7 @@
         }
 
     .wellcome_description {
-        /* Contenedor del texto */
+        /*CONTENEDOR DEL TEXTO DE BIENVENIDA Y ANIMACIÓN */
         opacity: 0;
         transform: translateY(20px);
         animation: fadeInSlideUp 1s ease-in-out forwards;
@@ -42,6 +43,7 @@
         }
 
         h2 {
+            @extend h1; /*SE USA EXTEND PARA DARLE AL H2 DE BIENVENIDA EL MISMO ESTILO QUE EL H1 QUE CONTIENE EL HEADER EN LA BARRA DE NAVEGACIÓN*/
             animation-delay: 0.4s;
         }
 

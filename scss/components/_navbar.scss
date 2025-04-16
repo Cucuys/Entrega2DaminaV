@@ -10,21 +10,21 @@
     border-radius: 80px;
 
     .navbar-brand {
-        color: map.get($colors, highlight); /* Color para el logo y otras partes de la web */
+        color: map.get($colors, highlight); /*SE GENERA EL COLOR CON EL MAPS PARA EL LOGO Y OTRAS PARTES DE LA WEB */
         font-size: 1.5rem;
         font-weight: bold;
         margin-left: 1rem;
         }
 
     .nav-link {
-        color: map.get($colors, highlight); /* Color de los items de barra nav */
-        position: relative; /* Para posicionar la linea debajo de cada item */
-        padding: 0.5rem 0;
+        color: map.get($colors, highlight); /* COLOR DE CADA ITEM EN LA BARRA NAV*/
+        position: relative; /* SE POSICIONA LA LINEA DE CADA ITEM PARA LA POSICION */
+        padding: 0.5rem 0; /*SE UTILIZAN MEDIDAS RELATIVAS YA QUE CON PX GENERABA PROBLEMAS AL CAMBIAR DE TAMAÑO*/
         text-decoration: none;
         &::after {
-            content: ''; /* Pseudo elemento para la linea animada */
+            content: ''; /* SE GENERÓ EL PSEUDO ELEMENTO PARA APLICARLO EN LA WEB Y GENERAL LA LINEA ANIMADA DEBAJAO DEL ITEM */
             position: absolute;
-            bottom: -5px; /* Espacio entre texto y línea */
+            bottom: -5px; /* SE GENERA EL ESPACIO ENTRE EL TEXTO DEL ITEM Y LA LINEA */
             left: 0;
             width: 100%;
             height: 3px;
@@ -39,10 +39,10 @@
         }
 
     .navbar-toggler {
-         border: none; /* Elimina borde del botón hamburguesa */
+         border: none; /* SE ELIMINA EL BORDE DEL BOTÓN HAMBURGUESA */
 
         .navbar-toggler-icon {
-            background-color: transparent;
+            background-color: transparent; /*SE USA LA URL DEL ARCHIVO DE BOOSTRAP PARA CAMBIARLE EL CÓLOR*/
             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28189, 144, 68, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
         }
     }

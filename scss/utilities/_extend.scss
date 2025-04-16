@@ -3,7 +3,7 @@
 @use '../utilities/maps' as *;
 @use '../base/variables' as *;
 
-%footer-link-base { 
+%footer-link-base {  /*SE GENERA UN EXTEND PARA UTILIZAR EN DOS SECCIONES DISTINTAS DEL FOOTER*/
     text-decoration: none;
     background-color: none;
     color: map.get($colors, secondary);

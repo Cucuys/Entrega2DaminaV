@@ -2,6 +2,7 @@
 @use '../utilities/maps' as *;
 @use '../base/variables' as *;
 
+/*SE UTILIZAN MAPS PARA EL COLOR*/
 .accordion {
     border-top: solid 8px map.get($colors, highlight);
     border-radius: 14px;
