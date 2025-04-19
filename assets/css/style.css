@@ -56,7 +56,7 @@ p {
   font-size: 1.7em;
 }
 
-.container {
+.container { /*SE UTILIZA PARA EL CONTENEDOR DE TARJETAS Y TAMBIEN PARA EL CONTENEDOR DE BOOSTRAP, SE APLICAN ESTILOS Y LUEGO SE MODIFICAN CON BOOSTRAPS, APLICADO EN "SOBRE NOSOTROS"*/
   border-bottom: 3px solid #F3AE5F;
   border-top: 8px solid #F3AE5F;
   border-radius: 20px;
